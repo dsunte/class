@@ -2,6 +2,7 @@ package test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.*;
 
@@ -13,7 +14,7 @@ public class TravelTest {
 	{
 		
 		driver = new FirefoxDriver();
-		driver.get("http://newtours.demoaut.com/");
+		
 	}
 	
 	@AfterTest
@@ -24,6 +25,27 @@ public class TravelTest {
 	
 	@Test(priority=1)
 	public void FirefoxTest()
+	{  driver.get("http://newtours.demoaut.com/");
+		TheTest();
+	}
+	@Test(priority=2)
+	public void ChromeTest()
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://newtours.demoaut.com/");
+		TheTest();
+	}
+	
+	@Test(priority=3)
+	public void IETest()
+	{
+		System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();
+		driver.get("http://newtours.demoaut.com/");
+		TheTest();
+	}
+	public void TheTest()
 	{
 		driver.findElement(By.name("userName")).clear();
 		driver.findElement(By.name("userName")).sendKeys("tutorial");
