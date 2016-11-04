@@ -60,6 +60,10 @@ public class TravelTest {
 		driver.findElement(By.name("passLast0")).sendKeys("Doe");
 		driver.findElement(By.name("creditnumber")).sendKeys("11111111");
 		driver.findElement(By.name("buyFlights")).click();
+		//check price and return to home page
+		String priceCheck = driver.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[12]/td/table/tbody/tr[2]/td[2]/font/b/font/font/b/font")).getText();
+		System.out.println(priceCheck);
+		driver.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[7]/td/table/tbody/tr/td[2]/a/img")).click();
 	} 
 	
 
