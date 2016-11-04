@@ -50,7 +50,11 @@ public class TravelTest {
 		//Submit form
 		driver.findElement(By.name("findFlights")).click();
 		
-	}
+		//find the date
+		String dateCheck= driver.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[1]/tbody/tr[1]/td/table/tbody/tr[2]/td[2]/b/font")).getText();
+		System.out.println(dateCheck);
+		driver.findElement(By.name("reserveFlights")).click();
+	} 
 	
 
 }
