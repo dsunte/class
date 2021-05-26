@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://nicholasjohnson.com/mongo/course/workbook/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}</style>
+    
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>MongoDB Workbook</title>
+    <meta name="description" value="Learn Mongo from an someone who actually uses it. Live coding, Q&amp;A,practical workshops, deep theory and lots of real world exercises.">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="http://nicholasjohnson.com/blog/feed.xml" rel="alternate" title="RSS Feed for nicholasjohnson.com" type="application/rss+xml">
+    <link href="./MongoDB Workbook complete_files/style.css" rel="stylesheet" type="text/css">
+    <link href="./MongoDB Workbook complete_files/monokai.css" rel="stylesheet" type="text/css">
+    <link href="./MongoDB Workbook complete_files/pdf.css" rel="stylesheet" type="text/css">
+    <link href="./MongoDB Workbook complete_files/css" rel="stylesheet" type="text/css">
+    <link href="./MongoDB Workbook complete_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <script async="" src="./MongoDB Workbook complete_files/analytics.js"></script><script type="text/javascript" async="" src="./MongoDB Workbook complete_files/embed.js"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.66d90a567df61ef2f1d6862d5e000e49.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.f485ba8b89bf2153fdb9f493ec342aed.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.9523cac7cfc0d3ecf8de05afe92be4a2.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><script async="" id="dsq_recs_scr" src="./MongoDB Workbook complete_files/recommendations.js"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/recommendations/styles/recommendations.eff219b98b7c4167b4b289065f36f391.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/recommendations/common.bundle.9aad4e5af3027dd4fbeac9669fb17819.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/recommendations/recommendations.bundle.ddbe52aded335130c3d3c3842883fb53.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"></head>
+  <body class="mongo mongo_course mongo_course_workbook mongo_course_workbook_index workbook_page ng-scope" ng-app="myApp">
+    <nav class="top_nav">
+      <ul>
+        <li>
+          <a href="http://nicholasjohnson.com/">Home</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/javascript/">JavaScript</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/angular/">AngularJS</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/node/">NodeJS</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/mongo/">Mongo</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/react/">React/Flux</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/automation/">Automation</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/jquery-book/">JQuery</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/backbone-book/">Backbone</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/d3/">D3</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/ruby/">Ruby</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/webdev/">HTML/CSS</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/cv">CV</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/blog">Code Blog</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/courses/">Courses</a>
+        </li>
+        <li>
+          <a href="http://nicholasjohnson.com/contact/">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="wrap">
+      <article class="book_cover">
+        <section>
+          <h1 id="mongodb-workbook">MongoDB Workbook</h1>
+          
+          <h2 id="exercises-to-accompany-the-course">Exercises to accompany the course</h2>
+          
+          <p><strong>By Nicholas Johnson</strong></p>
+          
+          <p><strong>version 1.0.0</strong></p>
+          <img src="./MongoDB Workbook complete_files/shuttles.jpg">
+          <p><em>Image credit: <a href="http://www.nasa.gov/topics/people/features/mccall_gallery.html">Robert McCall, NASA</a></em></p>
+        </section>
+      </article>
+      <article>
+        <section id="intro">
+          <h1 id="welcome-to-the-mongo-workbook">Welcome to the Mongo Workbook</h1>
+          
+          <p>This little book accompanies the Mongo course taught over 2 days. Each exercise builds on the last, so it's best to work through these exercises in order.</p>
+          
+          <p>We'll start off with the helper functions, find, count and distinct, then move into the aggregate pipeline and on to map reduce, finally integrating with Node to produce a service oriented architecture.</p>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="welcome-to-mongodb">Welcome to MongoDB</h1>
+          
+          <p>Mongo DB is a highly scalable, NoSQL, schema free data store.</p>
+          
+          <h2 id="heres-why-its-great">Here's why it's great</h2>
+          
+          <ul>
+            <li>It stores data as JSON so you can use the same data clientside and serverside. This means you write almost no wiring code, everything just works.</li>
+            <li>Flexible Schema. If your requirements change, you can adapt.</li>
+            <li>Unstructured data - you can store and retrieve unstructured data easily. It's just JSON. Not every document in a collection needs the same fields.</li>
+            <li>Denormalised data - Group related content in a single document.</li>
+            <li>Clean and simple API - Mongo is nice to talk to.</li>
+          </ul>
+          
+          <h2 id="heres-why-you-might-not-like-it">Here's why you might not like it</h2>
+          
+          <ul>
+            <li>Denormalised data means no joins. If your data is highly relational, Mongo is not your baby. Your data is organised into collections. If you need data from more than collection, you need to hit the database more than once.</li>
+            <li>Flexible schema means no built in data validation. Your data is validated at the application tier. The database is dumb and will store whatever your application gives it, even junk and typos.</li>
+            <li>Bugs - Mongo is new and there are still issues in the tracker. Not bad bugs, but occasionally things don't work as you might expect.</li>
+            <li>No transactions - A SQL database allows you to bundle multiple writes into a transaction. If one write fails the whole transaction is rolled back. Mongo lacks this feature, writes are small and atomic. If you need a transaction you must build it yourself.</li>
+            <li>Theoretical data loss - Mongo scales using a technique called sharding. It creates slaves that mirror data written to the master. If the master goes down before data is mirrored you may lose recent commits depending on your settings.</li>
+          </ul>
+          
+          <h2 id="when-you-should-use-it">When you should use it</h2>
+          
+          <p>Mongo represents data as a tree. If your data is tree shaped, or can be made tree shaped, Mongo is great. If your data is a web or a network which can't be flattened out, you likely have relational data, and Mongo is perhaps not for you this time.</p>
+          
+          <p>If you have unstructured data to store which can be represented as a series of nested lists Mongo will make your life more enjoyable.</p>
+          
+          <p>Say you have a webpage full of widgets, and each of those widgets can contain arbitrary information. This is a semi-structured tree and Mongo might be a very good choice.</p>
+          
+          <p>If you have big customer data to store, and each customer record contains lists of communications, subscriptions, etc, the data is tree shaped, and Mongo would again be a good chice.</p>
+          
+          <p>If you have big data and you want to query it in interesting and complex ways, pulling useful aggregated data out the other side in suprisingly short timeframes, Mongo is perfect.</p>
+          
+          <p>On the other hand, if your data looks like a web: comments, purchases, kittens, customers, sharks, exploding hats, etc, all linking to each other in a web, then you have relational data, and you may wish to stick with a relational database like Postgres, MySQL or MS SQL Server.</p>
+          
+          <h2 id="why-is-it-fast">Why is it fast?</h2>
+          
+          <p>Mongo manages to be so fast because it does less. There's no magical difference in the architecture that makes it fast, it just has a simplified streamlined query language that is easier to optimise.</p>
+          
+          <h2 id="connecting-to-the-terminal">Connecting to the terminal</h2>
+          
+          <p>We connect to the Mongo terminal using the mongo command</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">mongo</span></div></code>
+          <p>By default Mongo will connect to localhost.</p>
+          
+          <p>We can connect to a remote server by passing arguments, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">mongo</span> <span class="nx">connection</span><span class="p">.</span><span class="nx">mongolab</span><span class="p">.</span><span class="nx">com</span><span class="o">:</span><span class="mi">45352</span> <span class="o">-</span><span class="nx">u</span> <span class="nx">username</span> <span class="o">-</span><span class="nx">p</span> <span class="nx">passw0rd</span></div></code>
+          <p>Once we connect to a Mongo instance we can type JavaScript directly into the console. We can create variables, do maths, write JSON.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---connect-to-a-console">Exercise - connect to a console</h2>
+          
+          <p>Connect to the console at localhost. Try typing some JavaScript expressions.</p>
+          
+          <ul>
+            <li>Tell me how many seconds there are in a week</li>
+            <li>Tell me how many weeks there are in a human lifetime of 80 years.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 id="creating-a-database">Creating a database</h2>
+          
+          <p>We can switch to a database in Mongo with the use command.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">use</span> <span class="nx">petshop</span></div></code>
+          <p>This will switch to writing to the petshop database. It doesn't matter if the database doesn't exist yet. It will be brought into existence when you first write a document to it.</p>
+          
+          <p>You can find which database you are using simply by typing db. You can drop the current database and everything in it using db.dropDatabase.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span></div>
+          <div class="line"><span class="o">&gt;</span> <span class="nx">petshop</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">dropDatabase</span><span class="p">()</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---create-a-database">Exercise - Create a database</h2>
+          
+          <ul>
+            <li>Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it).</li>
+          </ul>
+          
+          <p>That was easy wasn't it. Don't worry, it gets a bit harder.</p>
+        </section>
+        <section>
+          <h2 id="collections">Collections</h2>
+          
+          <p>Collections are sets of (usually) related documents. Your database can have as many collections as you like.</p>
+          
+          <p>Because Mongo has no joins, a Mongo query can pull data from only one collection at a time. You will need to take this into account when deciding how to arrange your data.</p>
+          
+          <p>You can create a collection using the createCollection command.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">use</span> <span class="nx">petshop</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">createCollection</span><span class="p">(</span><span class="s1">'mammals'</span><span class="p">)</span></div></code>
+          <p>Collections will also be created automatically. If you write a document to a collection that doesn't exist that collection will be brought into being for you.</p>
+          
+          <p>View your databases and collections using the show command, like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">show</span> <span class="nx">dbs</span></div>
+          <div class="line"><span class="nx">show</span> <span class="nx">collections</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---create-a-collection">Exercise - Create a collection</h2>
+          
+          <ul>
+            <li>Use db.createCollection to create a collection. I'll leave the subject up to you.</li>
+            <li>Run show dbs and show collections to view your database and collections.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 id="documents">Documents</h2>
+          
+          <p>Documents are JSON objects that live inside a collection. They can be any valid JSON format, with the caveat that they can't contain functions.</p>
+          
+          <p>The size limit for a document is 16Mb which is more than ample for most use cases.</p>
+          
+          <h3 id="creating-a-document">Creating a document</h3>
+          
+          <p>You can create a document by inserting it into a collection</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">mammals</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"Polar Bear"</span><span class="p">})</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">mammals</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"Star Nosed Mole"</span><span class="p">})</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---create-some-documents">Exercise - Create some documents</h2>
+          
+          <ul>
+            <li>Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats.</li>
+          </ul>
+        </section>
+        <section>
+          <h3 id="finding-a-document">Finding a document</h3>
+          
+          <p>You can find a document or documents matching a particular pattern using the find function.</p>
+          
+          <p>If you want to find all the mammals in the mammals collection, you can do this easily.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">mammals</span><span class="p">.</span><span class="nx">find</span><span class="p">()</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---documents">Exercise - documents</h2>
+          
+          <ul>
+            <li>Use find() to list them out.</li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="finding-documents">Finding documents</h1>
+          
+          <p>Mongo comes with a set of convenience functions for performing common operations. Find is one such function. It allows us to find documents by providing a partial match, or an expression.</p>
+          
+          <h2 id="uses">Uses</h2>
+          
+          <p>You <strong>can</strong> use find to:</p>
+          
+          <ul>
+            <li>Find a document by id</li>
+            <li>Find a user by email</li>
+            <li>Find a list of all users with the same first name</li>
+            <li>Find all cats who are more than 12 years old</li>
+            <li>Find all gerbils called 'Herbie' who are bald, have three or more eyes, and who have exactly 3 legs.</li>
+          </ul>
+          
+          <h2 id="limitations">Limitations</h2>
+          
+          <p>You <strong>can't</strong> use find to chain complex operators. You can do a few simple things like counting, but if you want to real power you need the <em>aggregate pipeline</em>, which is actually not at all scary and is quite easy to use.</p>
+          
+          <p>The Aggregate pipeline allows us to chain operations together and pipe a set of documents from one operation to the next.</p>
+          
+          <h2 id="using-find">Using find</h2>
+          
+          <p>You can use find with no arguments to list documents in a collection.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">find</span><span class="p">()</span></div></code>
+          <p>This will list all of the codes, 20 at a time.</p>
+          
+          <p>You can get the same result by passing an empty object, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">find</span><span class="p">({})</span></div></code>
+          <h2 id="finding-by-id">Finding by ID</h2>
+          
+          <p>Assuming you know the object ID of a document. You can pull that document by id like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">"557afc91c0b20703009f7edf"</span><span class="p">))</span></div></code>
+          <p>The _id field of any collection is automatically indexed.</p>
+          
+          <p>IDs are 12 byte BSON objects, not Strings which is why we need the ObectId function. If you want to read more on <a href="http://docs.mongodb.org/manual/reference/object-id/">ObjectId, you can do so here.</a></p>
+          
+          <h2 id="finding-by-partial-match">Finding by partial match</h2>
+          
+          <p>Say you have a list of users and you want to find by name, you might do:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"dave"</span><span class="p">})</span></div></code>
+          <p>You can match on more than one field:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span></div>
+          <div class="line">  <span class="nx">name</span><span class="o">:</span> <span class="s2">"dave"</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">email</span><span class="o">:</span> <span class="s2">"davey@aol.com"</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <p>You can match on numbers:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span></div>
+          <div class="line">  <span class="nx">name</span><span class="o">:</span> <span class="s2">"dave"</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">age</span><span class="o">:</span> <span class="mi">69</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">email</span><span class="o">:</span> <span class="s2">"davey@aol.com"</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <p>You also match using a regex (although be aware this is slow on large data sets):</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span></div>
+          <div class="line">  <span class="nx">name</span><span class="o">:</span> <span class="sr">/dave/</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise">Exercise</h2>
+          
+          <p>We need to start out by inserting some data which we can work with.</p>
+          
+          <ul>
+            <li>Paste the following into your terminal to create a petshop with some pets in it</li>
+          </ul>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">use</span> <span class="nx">petshop</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">pets</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"Mikey"</span><span class="p">,</span> <span class="nx">species</span><span class="o">:</span> <span class="s2">"Gerbil"</span><span class="p">})</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">pets</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"Davey Bungooligan"</span><span class="p">,</span> <span class="nx">species</span><span class="o">:</span> <span class="s2">"Piranha"</span><span class="p">})</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">pets</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"Suzy B"</span><span class="p">,</span> <span class="nx">species</span><span class="o">:</span> <span class="s2">"Cat"</span><span class="p">})</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">pets</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"Mikey"</span><span class="p">,</span> <span class="nx">species</span><span class="o">:</span> <span class="s2">"Hotdog"</span><span class="p">})</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">pets</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"Terrence"</span><span class="p">,</span> <span class="nx">species</span><span class="o">:</span> <span class="s2">"Sausagedog"</span><span class="p">})</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">pets</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"Philomena Jones"</span><span class="p">,</span> <span class="nx">species</span><span class="o">:</span> <span class="s2">"Cat"</span><span class="p">})</span></div></code>
+          <ul>
+            <li>Add another piranha, and a naked mole rat called Henry.</li>
+            <li>Use find to list all the pets. Find the ID of Mikey the Gerbil.</li>
+            <li>Use find to find Mikey by id.</li>
+            <li>Use find to find all the gerbils.</li>
+            <li>Find all the creatures named Mikey.</li>
+            <li>Find all the creatures named Mikey who are gerbils.</li>
+            <li>Find all the creatures with the string "dog" in their species.</li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="finding-with-expressions-and-comparison-queries">Finding with Expressions and comparison queries</h1>
+          
+          <p>We have seen how we can find elements by passing Mongo a partial match, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s1">'Yolanda Sasquatch'</span><span class="p">})</span></div></code>
+          <p>We can also find using expressions. We define these using JSON, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span></div>
+          <div class="line">  <span class="nx">age</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$gt</span><span class="o">:</span> <span class="mi">65</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <p>We can use operators like this:</p>
+          
+          <ul>
+            <li>$gt - Greater than</li>
+            <li>$lt - Less than</li>
+            <li>$exists - The field exists</li>
+          </ul>
+          
+          <p>See the full list here:</p>
+          
+          <p><a href="http://docs.mongodb.org/manual/reference/operator/query/">http://docs.mongodb.org/manual/reference/operator/query/</a></p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise">Exercise</h2>
+          
+          <p>Copy the following code into a Mongo terminal. It will create a collection of people, some of whom will have cats.</p>
+          
+          <p>Optionally modify the code so that some people have piranhas, and some have dachshunds.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">use</span> <span class="nx">people</span></div>
+          <div class="line"></div>
+          <div class="line"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span></div>
+          <div class="line">  <span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span></div>
+          <div class="line">    <span class="s1">'Yolanda'</span><span class="p">,</span></div>
+          <div class="line">    <span class="s1">'Iska'</span><span class="p">,</span></div>
+          <div class="line">    <span class="s1">'Malone'</span><span class="p">,</span></div>
+          <div class="line">    <span class="s1">'Frank'</span><span class="p">,</span></div>
+          <div class="line">    <span class="s1">'Foxton'</span><span class="p">,</span></div>
+          <div class="line">    <span class="s1">'Pirate'</span><span class="p">,</span></div>
+          <div class="line">    <span class="s1">'Poppelhoffen'</span><span class="p">,</span></div>
+          <div class="line">    <span class="s1">'Elbow'</span><span class="p">,</span></div>
+          <div class="line">    <span class="s1">'Fluffy'</span><span class="p">,</span></div>
+          <div class="line">    <span class="s1">'Paphat'</span></div>
+          <div class="line">  <span class="p">]</span></div>
+          <div class="line">  <span class="kd">var</span> <span class="nx">randName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span></div>
+          <div class="line">    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span></div>
+          <div class="line">    <span class="k">return</span> <span class="p">[</span></div>
+          <div class="line">      <span class="nx">names</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)],</span></div>
+          <div class="line">      <span class="nx">names</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)]</span></div>
+          <div class="line">    <span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">);</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line">  <span class="kd">var</span> <span class="nx">randAge</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span></div>
+          <div class="line">    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">n</span><span class="p">);</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span></div>
+          <div class="line">    <span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">name</span><span class="o">:</span> <span class="nx">randName</span><span class="p">(),</span></div>
+          <div class="line">      <span class="nx">age</span><span class="o">:</span> <span class="nx">randAge</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">    <span class="k">if</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.8</span><span class="p">)</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">person</span><span class="p">.</span><span class="nx">cat</span> <span class="o">=</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">name</span><span class="o">:</span> <span class="nx">randName</span><span class="p">(),</span></div>
+          <div class="line">        <span class="nx">age</span><span class="o">:</span> <span class="nx">randAge</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span></div>
+          <div class="line">      <span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">    <span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span></div>
+          <div class="line">  <span class="p">};</span></div>
+          <div class="line"><span class="p">})();</span></div></code>
+          <ul>
+            <li>Use find to get all the people who are exactly 99 years old</li>
+            <li>Find all the people who are eligible for a bus pass (people older than 65)</li>
+            <li>Find all the teenagers, greater than 12 and less than 20.</li>
+          </ul>
+        </section>
+        <section>
+          <h1 id="exists">$exists</h1>
+          
+          <p>We can use exists to filter on the existence of non-existence of a field. We might find all the breakfasts with eggs:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">breakfast</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span></div>
+          <div class="line">  <span class="nx">eggs</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$exists</span><span class="o">:</span> <span class="kc">true</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---exists">Exercise - $exists</h2>
+          
+          <ul>
+            <li>Find all the people with cats.</li>
+            <li>Find all the pensioners with cats.</li>
+            <li>Find all the teenagers with teenage cats.</li>
+          </ul>
+        </section>
+        <section>
+          <h1 id="gt-and-lt">$gt and $lt</h1>
+          
+          <p>We can use $gt and $lt to find documents that have fields which are greater than or less than a value:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">breakfast</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span></div>
+          <div class="line">  <span class="nx">starRating</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$gt</span><span class="o">:</span> <span class="mi">5</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---stockbrokers">Exercise - Stockbrokers</h2>
+          <p>We are going to use some real data now. The stocks json file is a list of all stocks traded in the US in 2015. It's real data.</p>
+          
+          <p>Download the stocks.json file from here:</p>
+          
+          <p><a href="http://nicholasjohnson.com/mongo/datasets/stocks.json">http://nicholasjohnson.com/mongo/datasets/stocks.json</a></p>
+          
+          <p>We can import a JSON file from the command line using the mongoimport shell command.</p>
+          
+          <p>Enter the following into a <strong>terminal</strong>. Don't enter this into the Mongo console or it won't work.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line">mongoimport --db stocks --collection stocks --file stocks.json</div></code>
+          <ul>
+            <li>Find all the stocks where the profit is over 0.5</li>
+            <li>Find all the stocks with negative growth</li>
+          </ul>
+        </section>
+        <section>
+          <h1 id="where">$where</h1>
+          
+          <p>We can even filter using an arbitrary JavaScript expression using $where. This will allow us to compare two fields in a single document.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">sandwiches</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span></div>
+          <div class="line">  <span class="nx">$where</span><span class="o">:</span> <span class="s2">"this.jam &amp;&amp; this.peanutButter &amp;&amp; this.jam &gt; this.peanutButter"</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <p>Here we find all the sandwiches with jam and peanut butter where the jam quotient outweighs the peanut butter.</p>
+          
+          <p><em>Warning: It's easy to overuse $where since it appears to do everything with plain old JavaScript. $where is eval-ing a JavaScript expression and as such is slow. Mongo can make no optimisations here, and must execute the JavaScript on every single document in the collection. Prefer the native operators where possible.</em></p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---where">Exercise - $where</h2>
+          
+          <ul>
+            <li>Use $where to find all the people who have a cat.</li>
+            <li>Find all the people who are younger than their cats. Remember, not everyone has a cat, so you will need to use a boolean &amp;&amp; to filter out the non-cat owners.</li>
+            <li>Does anyone have the same name as their cat? Re-run the insertion script to create more records until someone does.</li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="projection">Projection</h1>
+          
+          <p>Find takes a second parameter which allows you to whitelist fields to pass into the output document. We call this projection.</p>
+          
+          <p>You can choose fields to pass though, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">{</span></div>
+          <div class="line">  <span class="nx">ham</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">eggs</span><span class="o">:</span> <span class="mi">2</span></div>
+          <div class="line"><span class="p">}</span></div>
+          <div class="line"><span class="p">{</span></div>
+          <div class="line">  <span class="nx">cheese</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">lime</span><span class="o">:</span> <span class="mf">0.5</span></div>
+          <div class="line"><span class="p">}</span></div>
+          <div class="line"></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">breakfast</span><span class="p">.</span><span class="nx">find</span><span class="p">({},</span> <span class="p">{</span></div>
+          <div class="line">  <span class="nx">eggs</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">lime</span><span class="o">:</span> <span class="kc">true</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <p>This will yield</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">{</span></div>
+          <div class="line">  <span class="nx">eggs</span><span class="o">:</span> <span class="mi">2</span></div>
+          <div class="line"><span class="p">},</span></div>
+          <div class="line"><span class="p">{</span></div>
+          <div class="line">  <span class="nx">lime</span><span class="o">:</span> <span class="mf">0.5</span></div>
+          <div class="line"><span class="p">}</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---tidy-up-your-output">Exercise - Tidy up your output</h2>
+          
+          <ul>
+            <li>Use projection to format your array of people. We want only the names.</li>
+            <li>Output just the names of the people who are 99 years old</li>
+            <li>Output only the cats, like this:</li>
+          </ul>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">{</span> <span class="s2">"cat"</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">"name"</span> <span class="o">:</span> <span class="s2">"Fluffy Frank"</span><span class="p">,</span> <span class="s2">"age"</span> <span class="o">:</span> <span class="mi">13</span> <span class="p">}</span> <span class="p">}</span></div></code>
+          <p><em>When you output the cats, you will need to find only people who have cats, where cats $exists, or you will have gaps in your data.</em></p>
+        </section>
+        <aside class="box">
+          <h2 id="aggregation">Aggregation</h2>
+          
+          <p>We can do much more complex projection, even creating new fields based on expressions using the aggregate pipeline. More on this in a bit.</p>
+        </aside>
+        <section>
+          <h2 id="excluding-the-id-field">Excluding the id field</h2>
+          
+          <p>You will notice that the ID field is always passed through project by default. This is often desirable, but you may wish to hide it, perhaps to conceal your implementation, or to keep your communication over the wire tight.</p>
+          
+          <p>You can do this easily by passing _id: false:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">breakfast</span><span class="p">.</span><span class="nx">find</span><span class="p">({},</span> <span class="p">{</span></div>
+          <div class="line">  <span class="nx">eggs</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">lime</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">_id</span><span class="o">:</span> <span class="kc">false</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---remove-the-ids">Exercise - remove the ids</h2>
+          
+          <ul>
+            <li>List the cats. Remove the ids from the output.</li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="count-limit-skip--sort">Count, Limit, Skip &amp; Sort</h1>
+          
+          <p>We can chain some additional functions onto our find query to modify the output.</p>
+          
+          <h2 id="count">Count</h2>
+          
+          <p>Count will convert our result set into a number. We can use it in two ways. We can either chain it:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">sharks</span><span class="o">:</span> <span class="mi">3</span><span class="p">}).</span><span class="nx">count</span><span class="p">()</span></div></code>
+          <p>or we can use it in place of find:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">count</span><span class="p">({</span><span class="nx">sharks</span><span class="o">:</span> <span class="mi">3</span><span class="p">})</span></div></code>
+          <p>To count the people who have exactly three sharks.</p>
+          
+          <p>Don't confuse it with length(). Length will convert to an array, then count the length of that array. This is inefficient.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---count-the-people">Exercise - count the people</h2>
+          
+          <ul>
+            <li>Find out how many people there are in total.</li>
+            <li>Using your collection of people, and $exists, tell me how many people have cats.</li>
+            <li>Use $where to count how many people have cats which are older than them.</li>
+          </ul>
+          
+          <h2 id="optional-exercise---further-reading">Optional exercise - Further reading</h2>
+          
+          <p>Count can be a slow operation on large data sets. For more on optimising count, you might like to read the following: <a href="https://www.compose.io/articles/counting-and-not-counting-with-mongodb/">https://www.compose.io/articles/counting-and-not-counting-with-mongodb/</a></p>
+        </section>
+        <section>
+          <h2 id="limit-and-skip">Limit and Skip</h2>
+          
+          <p>Limit will allow us to limit the results in the output set. Skip will allow us to to offset the start. Between them they give us pagination.</p>
+          
+          <p>For example</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">biscuits</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span></div></code>
+          <p>will give us the first 5 biscuits. If we want the next 5 we can skip the first 5.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">biscuits</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">skip</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---limit-the-people">Exercise - Limit the people</h2>
+          
+          <ul>
+            <li>Give me the first 5 people</li>
+            <li>Give me the next 5 people</li>
+            <li>Give me the names and ages of the oldest 5 pensioners with piranhas</li>
+            <li>Give me the names and ages of the youngest 5 teenagers with cats, where the cats have the word "Yolanda" in their name.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 id="sort">Sort</h2>
+          
+          <p>We can sort the results using the sort operator, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">spiders</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span><span class="nx">hairiness</span><span class="o">:</span> <span class="mi">1</span><span class="p">})</span></div></code>
+          <p>This will sort the spiders in ascending order of hairiness. You can reverse the sort by passing -1.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">spiders</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span><span class="nx">hairiness</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">})</span></div></code>
+          <p>This will get the most hairy spiders first.</p>
+          
+          <p>We can sort by more than one field:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">spiders</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span></div>
+          <div class="line">  <span class="nx">hairiness</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">scariness</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <p>We might also sort by nested fields:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">spiders</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span></div>
+          <div class="line">  <span class="s1">'web.size'</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <p>will give the spiders with the largest webs.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---order-the-people">Exercise - Order the people</h2>
+          
+          <ul>
+            <li>Find the youngest 1 person with a cat and a piranha.</li>
+            <li>Give me just the name of the youngest 1 person with a cat and a piranha.</li>
+            <li>Give me the 5 oldest cats</li>
+            <li>Give me the next 5 oldest cats</li>
+          </ul>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---stocks">Exercise - Stocks</h2>
+          
+          <p>Use the stocks data from here:</p>
+          
+          <p><a href="http://nicholasjohnson.com/mongo/datasets/stocks.json">http://nicholasjohnson.com/mongo/datasets/stocks.json</a></p>
+          
+          <ul>
+            <li>Import it into Mongo using mongoimport, something like this:</li>
+          </ul>
+          <code class="code_block" ng-non-bindable=""><div class="line">mongoimport --db stocks --collection stocks --file stocks.json</div></code>
+          <ul>
+            <li>Find me the top 10 most profitable stocks</li>
+            <li>Add a projection, tell me which sector the most profitable stocks are in.</li>
+            <li>Which is the least profitable sector.</li>
+            <li>Have a look at the data. Spend a few minutes deciding which stocks you would most like to invest in.</li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="interacting-with-cursors">Interacting with cursors</h1>
+          
+          <p>When we compose a query, Mongo gives us back a cursor object from which we can get the values.</p>
+          
+          <p>When we called limit and sort in the last section, we were actually calling methods on the cursor that was returned by find.</p>
+          
+          <p>If we save the cursor in a variable we can call more methods on it.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="kd">var</span> <span class="nx">people</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="p">);</span></div></code>
+          <p>We can iterate over the the cursor using a simple while loop. We can check if the cursor has a next value, and can call cursor.next to get the value out.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="kd">var</span> <span class="nx">people</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">();</span></div>
+          <div class="line"><span class="k">while</span> <span class="p">(</span><span class="nx">people</span><span class="p">.</span><span class="nx">hasNext</span><span class="p">())</span> <span class="p">{</span></div>
+          <div class="line">   <span class="nx">print</span><span class="p">(</span><span class="nx">tojson</span><span class="p">(</span><span class="nx">people</span><span class="p">.</span><span class="nx">next</span><span class="p">()));</span></div>
+          <div class="line"><span class="p">}</span></div></code>
+          
+        </section>
+        <section>
+          <h2 id="functional-loops---foreach-and-map">Functional Loops - forEach and map</h2>
+          
+          <p>We can simplify the code above using functional style loops.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span> <span class="p">{</span></div>
+          <div class="line">  <span class="nx">print</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span></div>
+          <div class="line"><span class="p">});</span></div></code>
+          <p>We also have access to map, which will return an array of values.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span> <span class="p">{</span></div>
+          <div class="line">  <span class="k">return</span> <span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span></div>
+          <div class="line"><span class="p">});</span></div></code>
+        </section>
+        <aside class="box">
+          <h2 id="cursor-persistence">Cursor persistence</h2>
+          
+          <p>Cursors last for 10 minutes and are then garbage collected. This should be sufficient for most tasks. If you need a longer lasting cursor for some reason, you can create a long lasting cursor, however you should be aware that it will eventually go out of sync with the database.</p>
+          
+          <p>If you want to know how to prevent this behaviour, see here: <a href="http://docs.mongodb.org/manual/core/cursors/#closure-of-inactive-cursors">http://docs.mongodb.org/manual/core/cursors/#closure-of-inactive-cursors</a></p>
+        </aside>
+        <section class="exercise">
+          <h2 id="exercise---cursor-methods">Exercise - Cursor methods</h2>
+          
+          <p>You can read all the cursor methods here:</p>
+          
+          <p><a href="http://docs.mongodb.org/manual/reference/method/js-cursor/">http://docs.mongodb.org/manual/reference/method/js-cursor/</a></p>
+          
+          <ul>
+            <li>Iterate over each of the people and output them.</li>
+            <li>change the find function to find only the people with cats.</li>
+            <li>Iterate over each of the people, outputting just the cat name and age each time.</li>
+            <li>Use Map to generate an array containing all of the cat names.</li>
+          </ul>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---stock-ticker">Exercise - Stock ticker</h2>
+          
+          <ul>
+            <li>Sort the stocks by profit</li>
+            <li>Now iterate over the cursor and output all of the stocks names and tickers in order of profit.</li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="inserting-updating--deleting">Inserting, Updating &amp; Deleting</h1>
+          
+          <p>CRUD is a basic function of any database. Crud stands for:</p>
+          
+          <ul>
+            <li>Create</li>
+            <li>Read</li>
+            <li>Update</li>
+            <li>Delete</li>
+          </ul>
+          
+          <p>The four basic things that any data store needs to give us.</p>
+        </section>
+        <section>
+          <h2 id="creating">Creating</h2>
+          
+          <p>We create using the insert command, like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s2">"Tony Stark"</span><span class="p">,</span> <span class="nx">occupation</span><span class="o">:</span> <span class="s2">"Billionaire, playboy, philantropist..."</span><span class="p">})</span></div></code>
+          <p>The JSON object will be created and saved.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---create-a-document">Exercise - Create a document</h2>
+          
+          <p>Refresh your muscle memory. Create a new person now. Ensure that person has a shark.</p>
+        </section>
+        <section>
+          <h2 id="reading">Reading</h2>
+          
+          <p>We have many options for finding. We have already seen db.collection.find(). We can also use db.collection.findOne() which will return at most one result.</p>
+          
+          <p>As we shall see soon, we also have the aggregate framework, and if we need maximum flexibility at the expense of a good deal of speed, we can also use map-reduce.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---find-the-shark">Exercise - Find the shark</h2>
+          
+          <ul>
+            <li>Refresh your muscle memory. Find the person who has a shark.</li>
+            <li>Use findOne instead of find. This will return only one document.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 id="updating">Updating</h2>
+          
+          <p>We save using the db.collection.save function. We pass the function a JSON object that contains the modified object to save, including the _id. The item will be found and updated.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">findOne</span><span class="p">()</span></div>
+          <div class="line"><span class="nx">p</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">999</span></div>
+          <div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span></div></code>
+          <p>We can also find and update in a single step using the update function:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">update</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="s1">'dave'</span><span class="p">},</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">'brunhilde'</span><span class="p">})</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---make-everyone-older">Exercise - Make everyone older</h2>
+          
+          <ul>
+            <li>A year has gone by. Write a loop that iterates over a cursor and makes everyone one year older.</li>
+            <li>Remember to make the cats older too. See if you can do both in the same loop.</li>
+          </ul>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---pirates">Exercise - Pirates</h2>
+          
+          <ul>
+            <li>Find everyone who has the word 'Pirate' in their name. You will need to use a regular expression to do this. {name: /Pirate/}</li>
+            <li>Iterate over the cursor and award each of them a parrot.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 id="deleting">Deleting</h2>
+          
+          <p>We can remove people en-mass.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">people</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">remove</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="s1">'Dave'</span><span class="p">})</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---remove-all-the-people">Exercise - remove all the people.</h2>
+          
+          <ul>
+            <li>It's time for a cull. Delete all the 50 year olds.</li>
+            <li>We also heard there was some guy running round with a shark. That's a dangerous animal. Take him out, in fact take out anyone with a shark.</li>
+          </ul>
+        </section>
+        <section class="exercise">
+          <h2 id="larger-exercise---enron-fraud-search">Larger Exercise - Enron fraud search</h2>
+          
+          <p>In 2001, the American energy firm Enron was taken down by accounting fraud. During the investigation, the Federal Energy Regulatory Commission made their <a href="https://www.cs.cmu.edu/~./enron/">entire email database public</a> This is now the largest public domain email corpus available.</p>
+          
+          <p>We'll use this dataset more as we go on, but for now we want to get it into shape.</p>
+          
+          <p>Download the email corpus here:</p>
+          
+          <p><a href="http://nicholasjohnson.com/mongo/datasets/enron.json">http://nicholasjohnson.com/mongo/datasets/enron.json</a></p>
+          
+          <p>Import it into Mongo using mongoimport, something like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line">mongoimport --db enron --collection emails --file enron.json</div></code>
+          <p>Have a look at the data. You'll notice the email format we are provided with here is a string. We could really do with changing this field into a Date object.</p>
+          
+          <p>We can create a Date from a string like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="s2">"2000-08-23 02:16:00-07:00"</span><span class="p">)</span></div></code>
+          <p>Iterate over the dataset, converting all the strings into dates and saving them back into the database. You will need to use the save command for this.</p>
+          
+          <p>Just for fun, find every email that contains the word 'fraud'.</p>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="the-mongo-aggregation-framework">The Mongo Aggregation Framework</h1>
+          
+          <p>The Mongo Aggregation framework gives you a document query pipeline. You can pipe a collection into the top and transform it though a series of operations, eventually popping a result out the bottom (snigger).</p>
+          
+          <p>For example, you might take a result set, filter it, group by a particular field, then sum values in a particular group. You could find the total population of Iowa given an array of postcodes. You could find all the coupons that were used on Monday, and then count them.</p>
+          
+          <p>We can compose a pipeline as a set of JSON objects, then run the pipeline on a collection.</p>
+          
+          <h2 id="empty-pipeline">Empty pipeline</h2>
+          
+          <p>If you provide an empty pipeline, Mongo will return all the results in the collection:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">()</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---create-an-empty-pipeline">Exercise - Create an Empty pipeline</h2>
+          
+          <p>Try out the aggregate pipeline now. Call aggregate on your people collection. You'll see the result is the same as if you called find.</p>
+        </section>
+        <section>
+          <h1 id="filtering-the-pipeline-with-match">Filtering the pipeline with $match</h1>
+          
+          <p>We can use the aggregation pipeline to filter a result set. This is more or less analogous to find, and is probably the most common thing we want to do.</p>
+          
+          <p>Say we want to list only people who have cats (where cat is a sub-document), we would probably do something like this this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span></div>
+          <div class="line">  <span class="nx">cat</span><span class="o">:</span><span class="p">{</span></div>
+          <div class="line">    <span class="nx">$exists</span><span class="o">:</span> <span class="kc">true</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <p>We can get the same result in the aggregation framework using $match, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">({</span></div>
+          <div class="line">  <span class="s1">'$match'</span> <span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">    <span class="nx">cat</span><span class="o">:</span><span class="p">{</span></div>
+          <div class="line">      <span class="nx">$exists</span><span class="o">:</span> <span class="kc">true</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <p>So why use aggregation over find? In this example they are the same, but the power comes when we start to chain additional functions as we shall soon see.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---match">Exercise - $match</h2>
+          
+          <ul>
+            <li>Use the people dataset. Match all the people who are 10 years old who have ten year old cats.</li>
+            <li>Match all the people who are over 80 years old, and who's cats are over 15 years old.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 id="when-to-use-match">When to use match</h2>
+          
+          <p>Matching is quick but not smart. It's designed to limit the result set, so that the rest of the pipeline can run more quickly. When used with project we can match against fields that don't exist in our result set. This is a powerful and useful feature.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="larger-exercise---zips">Larger Exercise - Zips</h2>
+          
+          <p>Download the zips file here. This contains a list of all the zip codes in the US:</p>
+          
+          <p><a href="http://nicholasjohnson.com/mongo/datasets/zips.json">http://nicholasjohnson.com/mongo/datasets/zips.json</a></p>
+          
+          <p>Import it into Mongo using mongoimport, something like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line">mongoimport --db zips --collection zips --file zips.json</div></code>
+          <ul>
+            <li>Find all the zip codes in Massachusetts (state:'MA").</li>
+            <li>Find all the zip codes with a population less than 1000.</li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="modifying-a-stream-with-project">Modifying a stream with $project</h1>
+          
+          <p>The find function allowed us to do simple whitelist projection. The aggregate pipeline gives us many more options.</p>
+          
+          <p>We can use $project to modify all the documents in the pipeline. We can remove elements, allow elements through, rename elements, and even create brand new elements based on expressions.</p>
+          
+          <p>Say we have a set of voucher codes, like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">{</span></div>
+          <div class="line">  <span class="s2">"firstName"</span> <span class="o">:</span> <span class="s2">"Dave"</span><span class="p">,</span></div>
+          <div class="line">  <span class="s2">"lastName"</span> <span class="o">:</span> <span class="s2">"Jones"</span><span class="p">,</span></div>
+          <div class="line">  <span class="s2">"code"</span> <span class="o">:</span> <span class="s2">"74wy zphz"</span><span class="p">,</span></div>
+          <div class="line">  <span class="s2">"usedAt"</span> <span class="o">:</span> <span class="nx">ISODate</span><span class="p">(</span><span class="s2">"2015-06-13T17:47:20.423Z"</span><span class="p">),</span></div>
+          <div class="line">  <span class="s2">"email"</span> <span class="o">:</span> <span class="s2">"123@gmail.com"</span></div>
+          <div class="line"><span class="p">},</span></div>
+          <div class="line"><span class="p">{</span></div>
+          <div class="line">  <span class="s2">"firstName"</span> <span class="o">:</span> <span class="s2">"Stuart"</span><span class="p">,</span></div>
+          <div class="line">  <span class="s2">"lastName"</span> <span class="o">:</span> <span class="s2">"Hat"</span><span class="p">,</span></div>
+          <div class="line">  <span class="s2">"code"</span> <span class="o">:</span> <span class="s2">"7uwz e3cw"</span><span class="p">,</span></div>
+          <div class="line">  <span class="s2">"usedAt"</span> <span class="o">:</span> <span class="nx">ISODate</span><span class="p">(</span><span class="s2">"2015-06-13T17:47:50.489Z"</span><span class="p">),</span></div>
+          <div class="line">  <span class="s2">"email"</span> <span class="o">:</span> <span class="s2">"456@gmail.com"</span></div>
+          <div class="line"><span class="p">}</span></div>
+          <div class="line"><span class="p">...</span></div></code>
+          <p>We can use project to restrict the fields that are passed through. We pick the fields we like and set true to pass them through unchanged.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="s1">'$project'</span> <span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">email</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span></div>
+          <div class="line">      <span class="nx">code</span><span class="o">:</span> <span class="kc">true</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+        </section>
+        <section>
+          <h2 id="removing-the-id">Removing the id</h2>
+          
+          <p>Remove the id field bay passing _id: false.</p>
+          
+          <p>This will yield a set something like the following:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">[</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="s2">"code"</span> <span class="o">:</span> <span class="s2">"7uwy zphz"</span><span class="p">,</span></div>
+          <div class="line">    <span class="s2">"email"</span> <span class="o">:</span> <span class="s2">"123@gmail.com"</span></div>
+          <div class="line">  <span class="p">},</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="s2">"code"</span> <span class="o">:</span> <span class="s2">"7uwz eccw"</span><span class="p">,</span></div>
+          <div class="line">    <span class="s2">"email"</span> <span class="o">:</span> <span class="s2">"123@gmail.com"</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">]</span></div></code>
+          
+        </section>
+        <section>
+          <h2 id="renaming-fields">Renaming Fields</h2>
+          
+          <p>We can use project to rename fields if we want to. We use an expression: $lastName to pull out the value from the lastName field, and project it forward into the surname field.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="s1">'$project'</span> <span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">surname</span><span class="o">:</span> <span class="s2">"$lastName"</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          <p>This will yield something like the following:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">[</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">surname</span> <span class="o">:</span> <span class="s2">"Jones"</span></div>
+          <div class="line">  <span class="p">},</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">surname</span> <span class="o">:</span> <span class="s2">"Hat"</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line">  <span class="p">...</span></div>
+          <div class="line"><span class="p">]</span></div></code>
+        </section>
+        <section>
+          <h2 id="chaining-match-and-project">Chaining $match and $project</h2>
+          
+          <p>We can chain $match and $project together. Say we have a list of codes, and some have not yet been used. We want to pull out the names and emails, but only from the codes which have been used.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">[,</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="s2">"code"</span> <span class="o">:</span> <span class="s2">"7uwz eccw"</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="s2">"firstName"</span> <span class="o">:</span> <span class="s2">"Dave"</span><span class="p">,</span></div>
+          <div class="line">    <span class="s2">"lastName"</span> <span class="o">:</span> <span class="s2">"Jones"</span><span class="p">,</span></div>
+          <div class="line">    <span class="s2">"code"</span> <span class="o">:</span> <span class="s2">"7uwy zphz"</span><span class="p">,</span></div>
+          <div class="line">    <span class="s2">"usedAt"</span> <span class="o">:</span> <span class="nx">ISODate</span><span class="p">(</span><span class="s2">"2015-06-13T17:47:20.423Z"</span><span class="p">),</span></div>
+          <div class="line">    <span class="s2">"email"</span> <span class="o">:</span> <span class="s2">"123@gmail.com"</span><span class="p">,</span></div>
+          <div class="line">    <span class="s2">"winner"</span><span class="o">:</span> <span class="kc">true</span></div>
+          <div class="line">  <span class="p">},</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="s2">"firstName"</span> <span class="o">:</span> <span class="s2">"Stuart"</span><span class="p">,</span></div>
+          <div class="line">    <span class="s2">"lastName"</span> <span class="o">:</span> <span class="s2">"Hat"</span><span class="p">,</span></div>
+          <div class="line">    <span class="s2">"code"</span> <span class="o">:</span> <span class="s2">"7uwz eccw"</span><span class="p">,</span></div>
+          <div class="line">    <span class="s2">"usedAt"</span> <span class="o">:</span> <span class="nx">ISODate</span><span class="p">(</span><span class="s2">"2015-06-13T17:47:50.489Z"</span><span class="p">),</span></div>
+          <div class="line">    <span class="s2">"email"</span> <span class="o">:</span> <span class="s2">"123@gmail.com"</span></div>
+          <div class="line">  <span class="p">},</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="s2">"code"</span> <span class="o">:</span> <span class="s2">"7uwz eccw"</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line">  <span class="p">...</span></div>
+          <div class="line"><span class="p">]</span></div></code>
+          <p>We might first $match the codes which have a usedAt field, and then use $project to pull out the names and emails from the remainder.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$match</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">usedAt</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">$exists</span><span class="o">:</span> <span class="kc">true</span></div>
+          <div class="line">      <span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">},</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$project</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">firstName</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span></div>
+          <div class="line">      <span class="nx">lastName</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span></div>
+          <div class="line">      <span class="nx">email</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="kc">false</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise">Exercise</h2>
+          
+          <ul>
+            <li>Make a list of cat names.</li>
+            <li>First $match people with cats, or the output will be a bit sparse.</li>
+            <li>Now use $project to pull out only the cat names. You will need to use the dot syntax: '$cat.name'.</li>
+          </ul>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---stocks">Exercise - Stocks</h2>
+          
+          <ul>
+            <li>Use the stocks JSON file.</li>
+            <li>rename "Profit Margin" to simply "Profit". Surpress all other output including the id. I only want to see profit, the company name and the ticker.</li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="creating-new-fields-with-project">Creating new fields with $project</h1>
+          
+          <p>We can use project to add new fields to our documents based on expressions.</p>
+          
+          <p>Say we had a list of people, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="s2">"Chinstrap"</span><span class="p">,</span> <span class="nx">surname</span><span class="o">:</span> <span class="s2">"McGee"</span><span class="p">}</span></div>
+          <div class="line"><span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="s2">"Bootle"</span><span class="p">,</span> <span class="nx">surname</span><span class="o">:</span> <span class="s2">"Cheeserafter"</span><span class="p">}</span></div>
+          <div class="line"><span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="s2">"Mangstrang"</span><span class="p">,</span> <span class="nx">surname</span><span class="o">:</span> <span class="s2">"Fringlehoffen"</span><span class="p">}</span></div></code>
+          <p>We can use project to compose a name field, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$project</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">name</span><span class="o">:</span> <span class="p">{</span><span class="nx">$concat</span><span class="o">:</span> <span class="p">[</span><span class="s1">'$firstName'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'$surname'</span><span class="p">]}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          <p>This will give us results like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">{</span> <span class="s2">"name"</span> <span class="o">:</span> <span class="s2">"Dave Smith"</span> <span class="p">},</span></div>
+          <div class="line"><span class="p">{</span> <span class="s2">"name"</span> <span class="o">:</span> <span class="s2">"Mike Moo"</span> <span class="p">}</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---string-aggregation-operators">Exercise - String aggregation operators</h2>
+          
+          <p>We saw here how to use $concat to make a new attribute containing a concatenated string. Have a look at the other String aggregation operators here:</p>
+          
+          <p><a href="http://docs.mongodb.org/manual/reference/operator/aggregation-string/">http://docs.mongodb.org/manual/reference/operator/aggregation-string/</a></p>
+          
+          <p>Attempt to capitalize all the names. This is useful because Mongo grouping and matching is case sensitive.</p>
+        </section>
+        <section>
+          <h2 id="conditional-fields-with-cond">Conditional fields with $cond</h2>
+          
+          <p>We can set the value of a field using a boolean expression using $cond. There are a couple of ways to use $cond. You may wish to review the documentation here: <a href="http://docs.mongodb.org/manual/reference/operator/aggregation/cond/">http://docs.mongodb.org/manual/reference/operator/aggregation/cond/</a></p>
+          
+          <p>Say we have a set of customers, and some of them have complaints. We might set a flag on all of the unhappy customers like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">customers</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$project</span><span class="o">:</span><span class="p">{</span></div>
+          <div class="line">      <span class="nx">unhappy</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">$cond</span><span class="o">:</span> <span class="p">{</span> <span class="k">if</span><span class="o">:</span> <span class="s1">'$complaints'</span><span class="p">,</span> <span class="nx">then</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="k">else</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span></div>
+          <div class="line">      <span class="p">},</span></div>
+          <div class="line">      <span class="nx">complaints</span><span class="o">:</span> <span class="s1">'$complaints'</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          <p>Unhappy will either be true or false.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---add-a-hascat-field">Exercise - Add a hasCat field</h2>
+          
+          <ul>
+            <li>Use projection to add a hasCat field. This might form the basis for a future grouping or counting.</li>
+          </ul>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---project-the-stocks">Exercise - Project the stocks</h2>
+          
+          <ul>
+            <li>Modify your stocks. Project the profit as a profit field.</li>
+            <li>Add a isProfitable field to show if the profit is greater than 0.</li>
+            <li>Add a buyNow field to show if the profit is greater than 0.5</li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="grouping-with-group">Grouping with $group</h1>
+          
+          <p>$group allows us to group a collection according to criteria. We can group by fields that exist in the data, or we can group by expressions that create new fields.</p>
+          
+          <p>Group will operate on a set of documents in the pipeline, and output a new set of documents out the bottom.</p>
+          
+          <p>We group using the _id field. This will create a new _id for each group that will be an object containing the grouping criteria.</p>
+          
+          <p>The simplest group would look like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="mi">1</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          <p>The id field is empty, so the group contains the whole collection, but we haven't output anything, so each output document is empty.</p>
+          
+          <h2 id="grouping-by-id">Grouping by id</h2>
+          
+          <p>If we just want to group by a single field we can do this easily. The id of each output document will be the value of the expression, in this case '$name'.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="s1">'$name'</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise">Exercise</h2>
+          
+          <ul>
+            <li>Try this out on your people data set. You should get a list of distinct names.</li>
+            <li>The output is untidy, each name output in the id field. Add a $project step to the popeline to rename the '_id' field to 'name'.</li>
+          </ul>
+          
+          <p>You just wrote a function for getting distinct emails.</p>
+        </section>
+        <section>
+          <h2 id="grouping-by-multiple-fields">Grouping by multiple fields</h2>
+          
+          <p>You can group on more than one field by passing an object to _id:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">name</span><span class="o">:</span> <span class="s1">'$name'</span><span class="p">,</span></div>
+          <div class="line">        <span class="nx">age</span><span class="o">:</span> <span class="s1">'$age'</span></div>
+          <div class="line">      <span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---grouping-by-object">Exercise - Grouping by object</h2>
+          
+          <p>Try out the above. Notice that the _id field is now an object.
+          Use $project to reformat the data. You now have distinct names and ages.</p>
+        </section>
+        <section>
+          <h2 id="pushing-data-into-the-result">$pushing data into the result</h2>
+          
+          <p>When grouping we use the _id field to hold the common values that we are grouping our documents on. This means that the output of a group aggregation only holds the data that is common to all documents in that group.</p>
+          
+          <p>What happens though if we want to preserve a value that we are not grouping on. For this we use $push.</p>
+          
+          <h2 id="push">$push</h2>
+          
+          <p>$push will create an array and store part or all of the grouped source documents in it.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="s2">"$email"</span><span class="p">,</span></div>
+          <div class="line">      <span class="nx">count</span><span class="o">:</span> <span class="p">{</span><span class="nx">$sum</span><span class="o">:</span> <span class="mi">1</span><span class="p">},</span></div>
+          <div class="line">      <span class="nx">entry</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">$push</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">          <span class="nx">firstName</span><span class="o">:</span> <span class="s2">"$firstName"</span><span class="p">,</span></div>
+          <div class="line">          <span class="nx">lastName</span><span class="o">:</span> <span class="s2">"$lastName"</span></div>
+          <div class="line">        <span class="p">}</span></div>
+          <div class="line">      <span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">])</span></div></code>
+          <h1 id="root">$$ROOT</h1>
+          <p>The $$ROOT variable contains the source documents for the group. If you'd like to just pass them through unmodified, you can do this by $pushing $$ROOT into the output from the group.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="s2">"$email"</span><span class="p">,</span></div>
+          <div class="line">      <span class="nx">name</span><span class="o">:</span> <span class="s2">"$firstName"</span></div>
+          <div class="line">      <span class="nx">count</span><span class="o">:</span> <span class="p">{</span><span class="nx">$sum</span><span class="o">:</span> <span class="mi">1</span><span class="p">},</span></div>
+          <div class="line">      <span class="nx">entries</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$push</span><span class="o">:</span> <span class="s2">"$$ROOT"</span> <span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">])</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---group-and-push">Exercise - Group and push</h2>
+          
+          <ul>
+            <li>Use $match to select only people with cats</li>
+            <li>Now group by name, and for each person.</li>
+            <li>Push the cats into the result.</li>
+          </ul>
+          
+          <p>We can now see a list of all the cats owned by people with a particular name.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---enron">Exercise - Enron</h2>
+          
+          <ul>
+            <li>Take the Enron dataset and group by sender.</li>
+            <li>Push $$ROOT into the group. You now have the emails handily grouped by sender.</li>
+          </ul>
+        </section>
+        <section class="downloads">
+          <p><a href="https://www.dropbox.com/sh/j483hc4w3vp9rcb/AACdibGp3ebk5kHTfgIWfm30a?dl=1">Code from the board</a></p>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="counting-with-group">Counting with Group</h1>
+          
+          <p>Group has the ability to count. You can count the entries in a group. By chaining $group commands together you could count the number of groups.</p>
+          
+          <p>For example, say you have a set of customer records which may contain duplicate emails. You could group by email and find out who is using your service most often. You might count the groups, to get the number of distinct emails, you might group by count, to find how many people used your site once, twice, five times, etc.</p>
+          
+          <p>We use $group to count, because generally we want to count groups.</p>
+          
+          <h2 id="counting-everything">Counting everything</h2>
+          
+          <p>We could count the entire collection by grouping everything, then adding a count field. This is the same as db.collection.find().count()</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">hamsters</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span></div>
+          <div class="line">      <span class="nx">count</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">$sum</span><span class="o">:</span> <span class="mi">1</span></div>
+          <div class="line">      <span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---count-everything">Exercise - Count everything</h2>
+          
+          <ul>
+            <li>Count all the people. How many are there?</li>
+          </ul>
+          
+          <h2 id="count-with-match">Count with $match</h2>
+          
+          <ul>
+            <li>Add a $match step to the start of your pipeline. Count all the people with cats using the aggregate pipeline. How many do you have?</li>
+          </ul>
+          
+          <h2 id="harder---count-with-project-and-cond">Harder - Count with $project and $cond</h2>
+          
+          <ul>
+            <li>Use project to create a 'hasCat' field. You will need to use $cond to do this: <a href="http://docs.mongodb.org/manual/reference/operator/aggregation/cond/">http://docs.mongodb.org/manual/reference/operator/aggregation/cond/</a>. Check that your pipeline now contains the hasCat field.</li>
+            <li>Now group by hasCat and count.</li>
+            <li>Finally use $project to clean up your stats. You now have a JSON API call for finding the cat status in your application.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 id="counting-name-popularity">Counting Name Popularity</h2>
+          
+          <p>Let's group on name, then count how many people have each name:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">name</span><span class="o">:</span> <span class="s1">'$name'</span></div>
+          <div class="line">      <span class="p">},</span></div>
+          <div class="line">      <span class="nx">count</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">$sum</span><span class="o">:</span> <span class="mi">1</span></div>
+          <div class="line">      <span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          <h1 id="sorting-with-aggregation">Sorting with Aggregation</h1>
+          
+          <p>We can sort records in the aggregation pipeline just as we can with find. Choose the fields to sort on and pass 1 or -1 to sort or reverse the sort.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$sort</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">age</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span></div>
+          <div class="line">      <span class="nx">name</span><span class="o">:</span> <span class="mi">1</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---stocks">Exercise - Stocks</h2>
+          
+          <ul>
+            <li>group the stocks data by sector.</li>
+            <li>Use $sum to discover the most profitable sector</li>
+            <li>Sort by profitability</li>
+            <li>$project the results</li>
+          </ul>
+        </section>
+        <section>
+          <h2 id="count-distinct">Count distinct</h2>
+          
+          <p>Another challenge is to count the number of groups. For example, say you have a dataset containing duplicate emails, you might want to generate a list of distinct emails and then count that list.</p>
+          
+          <p>You have two ways to do this:</p>
+          
+          <h3 id="the-wrong-way">The wrong way</h3>
+          
+          <p>Now say we want to pick out all the unique emails, we might use distinct, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">distinct</span><span class="p">(</span><span class="s1">'email'</span><span class="p">)</span></div></code>
+          <p>This will pop a list out into memory, like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">[</span></div>
+          <div class="line">  <span class="s2">"123@gmail.com"</span><span class="p">,</span></div>
+          <div class="line">  <span class="s2">"456@gmail.com"</span><span class="p">,</span></div>
+          <div class="line">  <span class="s2">"567@gmail.com"</span><span class="p">,</span></div>
+          <div class="line">  <span class="s2">"890@aol.com"</span></div>
+          <div class="line"><span class="p">]</span></div></code>
+          <p>We could get the length of the collection just by querying the array, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">entrycodes</span><span class="p">.</span><span class="nx">distinct</span><span class="p">(</span><span class="s1">'email'</span><span class="p">).</span><span class="nx">length</span></div></code>
+          <p><strong>However, this is bad</strong>. Imagine now that we have 15,000,000 records. We now have to create a massive array just for the purpose of getting a single number.</p>
+          
+          <h3 id="the-right-way">The right way</h3>
+          
+          <p>Instead we can do this entirely in the aggregation framework using two group commands. First we group by emails and throw away the rest of the data. We now have a list of all the unique emails.</p>
+          
+          <p>We now want to find out how big this set is, so we create a big group that holds everything (using _id: 1) and count that.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="s1">'$email'</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">},</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span></div>
+          <div class="line">      <span class="nx">count</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">$sum</span><span class="o">:</span> <span class="mi">1</span></div>
+          <div class="line">      <span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---enron">Exercise - Enron</h2>
+          
+          <ul>
+            <li>The Enron dataset is a publically available database of emails sent during the Enron scandal.</li>
+          </ul>
+          
+          <p><a href="http://nicholasjohnson.com/mongo/datasets/enron.json">http://nicholasjohnson.com/mongo/datasets/enron.json</a></p>
+          
+          <ul>
+            <li>Import it into Mongo using mongoimport, something like this:</li>
+          </ul>
+          <code class="code_block" ng-non-bindable=""><div class="line">mongoimport --db enron --collection emails --file enron.json</div></code>
+          <ul>
+            <li>List all the unique senders.</li>
+            <li>Count all the unique senders.</li>
+            <li>group by sender and count to find out which email address sent the most emails.</li>
+            <li>Rank the senders in order or emails sent.</li>
+          </ul>
+          
+          <h2 id="harder">Harder</h2>
+          
+          <ul>
+            <li>Rank the senders in order or emails sent + emails received. You will need to use a project stage to do this.</li>
+          </ul>
+        </section>
+        <section class="downloads">
+          <p><a href="https://www.dropbox.com/sh/js08yz9vhsb47w7/AABv4Z5wD5wXtkqKULKAQwjLa?dl=1">Code from the board</a></p>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="aggregation-by-date">Aggregation by date</h1>
+          
+          <p>Stats are cool. People love stats. We can use Mongo to generate a timeline showing day by day activity.</p>
+          
+          <p>To do this we will need to group by date. First we add fields to our documents representing year, month and dayOfMonth. Then we group by these fields. We can count to get an aggregate, or filter based on some parameter.</p>
+          
+          <p><em>For clarity, I have separated this into group and project stages so you can see how the pipeline changes. You could roll these two steps into a single $group stage:</em></p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">competitionentries</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$project</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">year</span><span class="o">:</span> <span class="p">{</span><span class="nx">$year</span><span class="o">:</span> <span class="nx">date</span><span class="p">},</span></div>
+          <div class="line">      <span class="nx">month</span><span class="o">:</span> <span class="p">{</span><span class="nx">$month</span><span class="o">:</span> <span class="nx">date</span><span class="p">},</span></div>
+          <div class="line">      <span class="nx">dayOfMonth</span><span class="o">:</span> <span class="p">{</span><span class="nx">$dayOfMonth</span><span class="o">:</span> <span class="nx">date</span><span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">},</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">$group</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">      <span class="nx">_id</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">year</span><span class="o">:</span> <span class="s1">'$year'</span><span class="p">,</span></div>
+          <div class="line">        <span class="nx">month</span><span class="o">:</span> <span class="s1">'$month'</span><span class="p">,</span></div>
+          <div class="line">        <span class="nx">dayOfMonth</span><span class="o">:</span> <span class="s1">'$dayOfMonth'</span></div>
+          <div class="line">      <span class="p">},</span></div>
+          <div class="line">      <span class="nx">count</span><span class="o">:</span> <span class="p">{</span></div>
+          <div class="line">        <span class="nx">$sum</span><span class="o">:</span> <span class="mi">1</span></div>
+          <div class="line">      <span class="p">}</span></div>
+          <div class="line">    <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---holidays">Exercise - Holidays!</h2>
+          
+          <ul>
+            <li>Download the holidays dataset from here.</li>
+          </ul>
+          
+          <p><a href="http://nicholasjohnson.com/mongo/datasets/holidays.json">http://nicholasjohnson.com/mongo/datasets/holidays.json</a></p>
+          
+          <ul>
+            <li>Now import it into Mongo using mongoimport, something like this:</li>
+          </ul>
+          <code class="code_block" ng-non-bindable=""><div class="line">mongoimport --db holidays --collection holidays --file holidays.json</div></code>
+          <ul>
+            <li>Group the data by year, month and dayOfMonth. Be aware that not every holiday has a date. You may generate the dynamic fields with $project, or directly in $group _id.</li>
+            <li>$push the holiday name into the result set.</li>
+            <li>Sort by year, month and dayOfMonth.</li>
+          </ul>
+          
+          <p>You now have a calendar of events for the year.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---the-biggest-day">Exercise - the biggest day</h2>
+          
+          <ul>
+            <li>Add a $count to the $group operator and remove the $push.</li>
+            <li>Sort the data by count. Which day has the most holidays?</li>
+            <li>Which month has the most holidays?</li>
+          </ul>
+        </section>
+        <section class="exercise">
+          <h2 id="harder-exercise---bell-curve">Harder Exercise - bell curve</h2>
+          
+          <ul>
+            <li>Add another group stage. Group your result set by the count field you generated in the previous step. We can say how many days have one holiday, how many have 2, how many have 3, etc.</li>
+            <li>Sort by this new count field. You should see a nice bell curve with the median around 3, and a long tail.</li>
+            <li>Use $project to tidy your results.</li>
+          </ul>
+          
+          <p>Why might this be useful? Imagine instead of holidays, we have a list of customer complaints. We can now find how customer complaints are distributed, which might be useful.</p>
+        </section>
+        <section class="downloads">
+          <p><a href="https://www.dropbox.com/sh/wkl82kowjdt7kr8/AABK-5iGAtjX1pfqzzGh9GDCa?dl=1">Code from the board</a></p>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="unwind-arrays-and-manipulate-the-contents">Unwind arrays and manipulate the contents</h1>
+          
+          <p>We use unwind when we have data that contains arrays, for example</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">'dave'</span><span class="p">,</span> <span class="nx">pets</span><span class="o">:</span> <span class="p">[</span><span class="s1">'cat'</span><span class="p">,</span> <span class="s1">'dog'</span><span class="p">]}</span></div>
+          <div class="line"><span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">'mike'</span><span class="p">,</span> <span class="nx">pets</span><span class="o">:</span> <span class="p">[</span><span class="s1">'naked mole rat'</span><span class="p">,</span> <span class="s1">'dog'</span><span class="p">,</span> <span class="s1">'hat'</span><span class="p">]}</span></div></code>
+          <p>We can unwind this data to get a unique entry for each element in the array:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span></div>
+          <div class="line">  <span class="p">{</span> <span class="nx">$unwind</span> <span class="o">:</span> <span class="s2">"$pets"</span> <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          <p>This will yield something like this:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">'dave'</span><span class="p">,</span> <span class="nx">pets</span><span class="o">:</span> <span class="s1">'cat'</span><span class="p">}</span></div>
+          <div class="line"><span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">'dave'</span><span class="p">,</span> <span class="nx">pets</span><span class="o">:</span> <span class="s1">'dog'</span><span class="p">}</span></div>
+          <div class="line"><span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">'mike'</span><span class="p">,</span> <span class="nx">pets</span><span class="o">:</span> <span class="s1">'naked mole rat'</span><span class="p">}</span></div>
+          <div class="line"><span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">'mike'</span><span class="p">,</span> <span class="nx">pets</span><span class="o">:</span> <span class="s1">'dog'</span><span class="p">}</span></div>
+          <div class="line"><span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">'mike'</span><span class="p">,</span> <span class="nx">pets</span><span class="o">:</span> <span class="s1">'hat'</span><span class="p">}</span></div></code>
+          <h2 id="why-is-this-useful">Why is this useful?</h2>
+          
+          <p>Say you needed to get hold of the number of dogs, you can't easily group and count on an entry in an array. If you unwind first you can easily group on the pets field.</p>
+        </section>
+        <section class="exercise">
+          <p>-# TODO Preprep this data. This exercise is too hard</p>
+          
+          <h2 id="exercise---tag-list">Exercise - tag list</h2>
+          
+          <p>Download the company startup dataset here:</p>
+          
+          <p><a href="http://nicholasjohnson.com/mongo/datasets/startups.json.zip">http://nicholasjohnson.com/mongo/datasets/startups.json.zip</a></p>
+          
+          <p>Now load it into a database collection.</p>
+          
+          <h3 id="prep-the-data">Prep the data</h3>
+          
+          <p>First up we have to prep the data. We are going to be filtering by tags. Notice that the tag_list is a comma separated string. Ideally this would be an array.</p>
+          
+          <p>Use a cursor to iterate over the array and convert the comma separated string into an array, then save this array back into your collection. use split() to convert a string into an array, like so:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="s2">"a,b"</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">","</span><span class="p">)</span></div></code>
+          <h3 id="unwind-the-data">unwind the data</h3>
+          
+          <ul>
+            <li>Now each company has a tag array, $unwind the tags, then write a $group aggregation to generate a complete list of all available tags without duplicates.</li>
+            <li>Add in a count to find the most popular tags.</li>
+            <li>Run the output through $project to generate a nice JSON tag feed.</li>
+          </ul>
+          
+          <h2 id="extension">Extension</h2>
+          
+          <p>Tell me the total number of tags.</p>
+        </section>
+        <section>
+          <h2 id="unwind-can-be-the-opposite-of-push">Unwind can be the opposite of push</h2>
+          
+          <p>Say we have previously $group-ed our data, and $push-ed to generate an array. we can use $unwind to restore the values with the count attached.</p>
+          
+          <p>Say we have a list of customer interactions. For each interaction we want to add an 'engagement' field which lists out the number of times the customer appears in the list.</p>
+          
+          <p>We might:</p>
+          
+          <ul>
+            <li>$group by email and $count interactions</li>
+            <li>$push the $$ROOT into a 'customer' field</li>
+            <li>$unwind the customer field</li>
+            <li>$project to tidy up the data</li>
+          </ul>
+          
+          <p>We now have the original time series data, but with the addition of an engagement field.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---enron">Exercise - Enron</h2>
+          
+          <ul>
+            <li>Use the Enron dataset.</li>
+          </ul>
+          
+          <p><a href="http://nicholasjohnson.com/mongo/datasets/enron.json">http://nicholasjohnson.com/mongo/datasets/enron.json</a></p>
+          <p>First we have to prep the data. Unless you've already converted it, The date will be stored as a string. We would ideally like to convert it to an actual date.</p>
+          
+          <p>We can split the data using a script like this one. See if you can see what it is doing:</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">startups</span><span class="p">.</span><span class="nx">find</span><span class="p">({}).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">startup</span><span class="p">)</span> <span class="p">{</span></div>
+          <div class="line">  <span class="k">if</span> <span class="p">(</span><span class="nx">startup</span><span class="p">.</span><span class="nx">tag_list</span> <span class="o">&amp;&amp;</span> <span class="nx">startup</span><span class="p">.</span><span class="nx">tag_list</span><span class="p">.</span><span class="nx">split</span><span class="p">)</span> <span class="p">{</span></div>
+          <div class="line">    <span class="nx">startup</span><span class="p">.</span><span class="nx">tag_list</span> <span class="o">=</span> <span class="nx">startup</span><span class="p">.</span><span class="nx">tag_list</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">','</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">){</span><span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">trim</span><span class="p">()});</span></div>
+          <div class="line">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span></div>
+          <div class="line">    <span class="nx">startup</span><span class="p">.</span><span class="nx">tag_list</span> <span class="o">=</span> <span class="p">[];</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line">  <span class="nx">print</span><span class="p">(</span><span class="nx">startup</span><span class="p">.</span><span class="nx">tag_list</span><span class="p">);</span></div>
+          <div class="line">  <span class="nx">db</span><span class="p">.</span><span class="nx">startups</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">startup</span><span class="p">)</span></div>
+          <div class="line"><span class="p">})</span></div></code>
+          <h3 id="split-by-day">Split by day</h3>
+          
+          <ul>
+            <li>Create a timeline that shows the number of emails by day.</li>
+            <li>Create a filter that shows the number of emails by day, sent by people who had sent 10 or more emails.</li>
+          </ul>
+        </section>
+        <section class="downloads">
+          <p><a href="https://www.dropbox.com/sh/qmzwsj4qs6f4e0e/AABDUeAQhBBW9cThR595Fz62a?dl=1">download code from board</a></p>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h1 id="map-reduce">Map Reduce</h1>
+          
+          <p>Prior to Mongo 2.6, Map reduce was the only way to run queries on Mongo. The aggregate framework has largely replaced Map reduce, but we can still use it for complex queries.</p>
+          
+          <h2 id="speed">Speed</h2>
+          
+          <p>Because Map reduce runs JavaScript functions, it can be slower than the equivalent aggregate pipeline. Favour aggregate operations where possible.</p>
+          
+          <h2 id="map">Map</h2>
+          
+          <p>The Map stage accepts a single document and converts it to a usable form. Say you are summing all the fleas on an elephant, the map stage might output just the fleacount for a single elephant. It emits the value. It can emit many values.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span></div>
+          <div class="line">  <span class="nx">emit</span><span class="p">(</span><span class="s1">'flea_count'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">flea_count</span><span class="p">)</span></div>
+          <div class="line">  <span class="nx">emit</span><span class="p">(</span><span class="s1">'tick_count'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">tick_count</span><span class="p">)</span></div>
+          <div class="line"><span class="p">}</span></div></code>
+          <h2 id="reduce">Reduce</h2>
+          
+          <p>The reduce stage accepts multiple mapped inputs and aggregates them in some way, perhaps adding them to an array, or summing them.</p>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="kd">var</span> <span class="nx">reduce</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">counts</span><span class="p">)</span> <span class="p">{</span></div>
+          <div class="line">  <span class="k">return</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">sum</span><span class="p">(</span><span class="nx">counts</span><span class="p">)</span></div>
+          <div class="line"><span class="p">}</span></div></code>
+          <h2 id="finally-we-issue-the-query">Finally we issue the query:</h2>
+          <code class="code_block" ng-non-bindable=""><div class="line"><span class="nx">db</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">mapReduce</span><span class="p">(</span></div>
+          <div class="line">  <span class="nx">map</span><span class="p">,</span></div>
+          <div class="line">  <span class="nx">reduce</span><span class="p">,</span></div>
+          <div class="line">  <span class="p">{</span></div>
+          <div class="line">    <span class="nx">out</span><span class="o">:</span> <span class="p">{</span> <span class="nx">inline</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span></div>
+          <div class="line">  <span class="p">}</span></div>
+          <div class="line"><span class="p">)</span></div></code>
+          <p>read more about map reduce here: <a href="http://docs.mongodb.org/manual/reference/method/db.collection.mapReduce/">http://docs.mongodb.org/manual/reference/method/db.collection.mapReduce/</a></p>
+          
+          <h2 id="why-this-is-fast">Why this is fast</h2>
+          
+          <p>If you have data distributed across a cluster, each machine in the cluster can map a few documents feeding the result forward. Furthermore, each machine can handle a few reduce operations, potentially distributing the workload very widely.</p>
+          
+          <p>This is the algorithm that Google uses in its search, so as you can imagine it's quite quick.</p>
+        </section>
+        <section class="exercise">
+          <h2 id="exercise---map-reduce">Exercise - Map Reduce</h2>
+          
+          <ul>
+            <li>Use Map reduce to take the people data and count the total age of everyone.</li>
+            <li>Count the total age of all the cats.</li>
+          </ul>
+        </section>
+      </article>
+      
+      
+      
+      
+    </div>
+    <article>
+      <div id="disqus_recommendations" style="margin-bottom: 12px;"><iframe id="dsq-app4806" name="dsq-app4806" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./MongoDB Workbook complete_files/saved_resource.html" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 240px !important; display: inline !important; box-sizing: border-box !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div><div id="disqus_thread"><iframe id="dsq-app143" name="dsq-app143" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./MongoDB Workbook complete_files/saved_resource(1).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 393px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+      <script>
+        var disqus_shortname = 'nicholasjohnson';
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>
+        Please enable JavaScript to view the
+        <a href='http://disqus.com/?ref_noscript'>comments powered by Disqus.</a>
+      </noscript>
+      
+    </article>
+    <footer>
+      <div class="wrap">
+        <nav class="books">
+          <h2>Books</h2>
+          <ul>
+            <li>
+              <a href="http://nicholasjohnson.com/angular-book/">Angular Book</a>
+            </li>
+            <li>
+              <a href="http://nicholasjohnson.com/javascript-book/">JavaScript Book</a>
+            </li>
+            <li>
+              <a href="http://nicholasjohnson.com/jquery-book/">JQuery Book</a>
+            </li>
+            <li>
+              <a href="http://nicholasjohnson.com/backbone-book/">Backbone Book</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="hacks">
+          <h2>Hacks</h2>
+          <ul>
+            <li>
+              <a href="http://nicholasjohnson.com/hacks/image_resizer">Client side image manipulatatron</a>
+            </li>
+            <li>Popgrid Sass - Semantic Bootstrap Layouts (soon)</li>
+          </ul>
+        </nav>
+        <nav class="courses">
+          <h2>
+            <a href="http://nicholasjohnson.com/courses">Courses</a>
+          </h2>
+          <ul>
+            <li>
+              <a href="http://nicholasjohnson.com/angular/course">
+                AngularJS
+                <ul>
+                  <li>2 day course</li>
+                  <li>Beginner to advanced Angular</li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="http://nicholasjohnson.com/javascript">JavaScript with JQuery</a>
+            </li>
+            <li>
+              <a href="http://nicholasjohnson.com/courses/modern-web-design">
+                Modern web design
+                <ul>
+                  <li>5 days</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Responsive Design</li>
+                  <li>Advanced JavaScript</li>
+                  <li>JQuery</li>
+                  <li>AngularJS || Backbone</li>
+                  <li>NodeJS</li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="media">
+          <h2>Look me up</h2>
+          <ul>
+            <li>
+              <a href="mailto:nicholas@forwardadvance.com">Email me</a>
+            </li>
+            <li>
+              <a href="http://stackoverflow.com/users/687677/superluminary">Stack Overflow</a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/109434017175380590715" rel="author">Find me on Google+</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/nicholashowardjohnson">LinkedIn</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="wrap">
+        <nav class="stack_overflow">
+          <h2>Top Answers</h2>
+          <ul>
+            <li>
+              <a href="http://stackoverflow.com/a/23245379/687677">How do search engines deal with AngularJS applications?</a>
+            </li>
+            <li>
+              <a href="http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background/23606512#23606512">How do I think in Angular if I have a jQuery background?</a>
+            </li>
+            <li>
+              <a href="http://stackoverflow.com/a/10978314/687677">Box sizing support in IE7</a>
+            </li>
+            <li>
+              <a href="http://stackoverflow.com/a/7464475/687677">What is a closure</a>
+            </li>
+            <li>
+              <a href="http://stackoverflow.com/a/24578786/687677">Whis is the purpose of BackboneJS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="./MongoDB Workbook complete_files/all.js" type="text/javascript"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-45875930-1', 'nicholasjohnson.com');
+      ga('send', 'pageview');
+    </script>
+  
+
+<iframe style="display: none;" src="./MongoDB Workbook complete_files/saved_resource(2).html"></iframe><iframe style="display: none;" src="./MongoDB Workbook complete_files/saved_resource(3).html"></iframe></body></html>

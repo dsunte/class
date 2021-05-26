@@ -1,0 +1,37 @@
+@media print {
+  /* line 7, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pdf.css.scss */
+  header, footer, nav.top_nav, #disqus_thread, aside.sidenote {
+    display: none; }
+
+  /* line 11, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pdf.css.scss */
+  aside.box {
+    background: transparent;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa; }
+    /* line 15, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pdf.css.scss */
+    aside.box * {
+      color: black; }
+
+  /* line 23, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pdf.css.scss */
+  section {
+    page-break-after: always; }
+
+  /* line 27, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pdf.css.scss */
+  section.downloads {
+    display: none; }
+
+  /* line 31, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pdf.css.scss */
+  body {
+    font-size: 12px; }
+
+  /* line 35, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pdf.css.scss */
+  h1 {
+    font-size: 27px; }
+
+  /* line 39, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pdf.css.scss */
+  h2 {
+    font-size: 18px; }
+
+  /* line 43, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pdf.css.scss */
+  h3 {
+    font-size: 12px; } }

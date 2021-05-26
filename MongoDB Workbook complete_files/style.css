@@ -1,0 +1,809 @@
+/* line 27, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 4, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_a.css.scss */
+a {
+  color: red;
+  text-decoration: none;
+  display: inline;
+  position: relative; }
+  /* line 9, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_a.css.scss */
+  a:after {
+    position: absolute;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 2px;
+    background: red;
+    content: "";
+    transition: all 0.2s; }
+
+/* line 22, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_a.css.scss */
+a:hover:after {
+  width: 100%; }
+
+/* line 28, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_a.css.scss */
+article a {
+  transition: all 0.5s;
+  border-bottom: 2px solid transparent; }
+  /* line 31, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_a.css.scss */
+  article a:after {
+    display: none; }
+  /* line 34, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_a.css.scss */
+  article a:hover {
+    border-bottom: 2px solid red; }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_body.css.scss */
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-weight: 400;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.5px; }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_wrap.css.scss */
+.wrap {
+  width: 1000px;
+  margin: 0 auto; }
+  /* line 20, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+  .wrap:after {
+    content: '';
+    clear: both;
+    display: table; }
+  @media (max-width: 1000px) {
+    /* line 9, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_wrap.css.scss */
+    .wrap {
+      margin: 0 20px;
+      width: auto; } }
+  @media (max-width: 800px) {
+    /* line 16, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_wrap.css.scss */
+    .wrap {
+      margin: 0 10px;
+      width: auto; } }
+
+/* line 1, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_article.css.scss */
+.book_cover {
+  text-align: center; }
+
+/* line 5, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_article.css.scss */
+article {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px; }
+  /* line 9, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_article.css.scss */
+  article img {
+    width: 100%; }
+  /* line 13, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_article.css.scss */
+  article section {
+    margin: 0 auto 5em auto; }
+  @media (max-width: 1000px) {
+    /* line 19, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_article.css.scss */
+    article {
+      width: auto;
+      padding: 0;
+      margin: 0; }
+    /* line 25, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_article.css.scss */
+    article section {
+      width: auto; } }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_figure.css.scss */
+figure {
+  display: block;
+  margin: 20px 0;
+  padding: 0; }
+  /* line 7, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_figure.css.scss */
+  figure img {
+    width: 100%; }
+  /* line 10, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_figure.css.scss */
+  figure figcaption {
+    display: block;
+    font-weight: bold; }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+form {
+  margin: 0;
+  padding: 0; }
+
+/* line 8, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 16, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+fieldset:first-child:before {
+  display: none; }
+
+/* line 20, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+fieldset:before {
+  content: "";
+  display: block;
+  margin: 40px 0;
+  width: 5%;
+  height: 4px;
+  background: #888; }
+
+/* line 29, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+input, textarea {
+  font-size: 16px;
+  border: 1px solid #888;
+  padding: 10px;
+  border-radius: 2px; }
+
+/* line 36, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+label {
+  padding: 10px 0; }
+
+/* line 40, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+.form_row {
+  margin: 10px 0; }
+  /* line 42, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+  .form_row label {
+    width: 25%;
+    display: inline-block; }
+  /* line 46, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+  .form_row input {
+    width: 74%; }
+
+/* line 50, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+.form_block {
+  margin: 10px 0; }
+  /* line 52, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+  .form_block label {
+    display: block; }
+  /* line 55, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+  .form_block input, .form_block textarea {
+    display: block;
+    width: 100%; }
+  /* line 59, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_forms.css.scss */
+  .form_block textarea {
+    height: 5em; }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_typography.css.scss */
+h1, h2, h3 {
+  font-weight: 300; }
+  /* line 5, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_typography.css.scss */
+  h1 a, h2 a, h3 a {
+    text-decoration: none; }
+
+/* line 10, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_typography.css.scss */
+h1 {
+  font-size: 44.0896px;
+  letter-spacing: 2px; }
+  /* line 12, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_typography.css.scss */
+  h1, h1 a {
+    color: black; }
+
+/* line 18, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_typography.css.scss */
+h2 {
+  font-size: 26.56px;
+  letter-spacing: 1px; }
+  /* line 21, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_typography.css.scss */
+  h2, h2 a {
+    color: #090909; }
+
+/* line 26, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_typography.css.scss */
+h3 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 800; }
+  /* line 30, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_typography.css.scss */
+  h3, h3 a {
+    color: #222; }
+
+@media (max-width: 800px) {
+  /* line 36, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/base/_typography.css.scss */
+  h1 {
+    font-size: 26.56px; } }
+/* line 1, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_box.css.scss */
+aside.box {
+  border-radius: 3px;
+  background: #222;
+  padding: 20px;
+  margin: 20px auto; }
+  /* line 6, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_box.css.scss */
+  aside.box * {
+    color: #fff;
+    text-shadow: 1px 1px #090909; }
+  /* line 10, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_box.css.scss */
+  aside.box *:first-child {
+    margin-top: 0; }
+  /* line 13, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_box.css.scss */
+  aside.box *:last-child {
+    margin-bottom: 0; }
+  /* line 16, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_box.css.scss */
+  aside.box a {
+    text-decoration: underline; }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_buttons.css.scss */
+a.button {
+  display: inline-block;
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.5s all; }
+  /* line 10, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_buttons.css.scss */
+  a.button.action {
+    margin: 20px auto;
+    font-size: 26.56px; }
+  /* line 14, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_buttons.css.scss */
+  a.button:hover:after {
+    display: none; }
+  /* line 17, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_buttons.css.scss */
+  a.button:hover {
+    background: black;
+    box-shadow: 0px 0 0px 5px red, 0px 0 0px 10px black; }
+
+/* line 23, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_buttons.css.scss */
+.action_button_row {
+  text-align: center; }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_code.css.scss */
+code {
+  font-family: monospace;
+  background: #222;
+  color: #a6e22e;
+  padding: 2px 4px;
+  border-radius: 5px; }
+  /* line 9, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_code.css.scss */
+  code.code_block {
+    display: block;
+    margin: 20px 0;
+    padding: 20px;
+    overflow: auto;
+    counter-reset: linecounter; }
+    /* line 16, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_code.css.scss */
+    code.code_block .line {
+      display: block;
+      white-space: pre;
+      counter-increment: linecounter; }
+      /* line 20, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_code.css.scss */
+      code.code_block .line:before {
+        content: counter(linecounter);
+        width: 2em;
+        display: inline-block;
+        border-right: 1px solid #fff;
+        margin-right: 1em; }
+
+/* line 1, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_codepen.css.scss */
+.codepen {
+  min-height: 268px;
+  margin: 40px 0;
+  border: 1px solid black;
+  border-radius: 5px 5px 0 0;
+  padding: 20px; }
+  /* line 7, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_codepen.css.scss */
+  .codepen:after {
+    content: 'loading...';
+    margin: 20px 0;
+    display: block; }
+
+/* line 14, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_codepen.css.scss */
+.cp_embed_iframe {
+  border: 1px solid black;
+  margin: 20px 0;
+  border-radius: 5px 5px 0 0; }
+
+/* line 1, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+.course_links {
+  position: fixed;
+  right: 0;
+  top: 200px; }
+  /* line 5, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+  .course_links ul, .course_links li {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  /* line 10, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+  .course_links li {
+    margin-bottom: 20px; }
+  /* line 13, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+  .course_links a {
+    display: block;
+    width: 300px;
+    background: #888;
+    padding: 20px;
+    color: #fff; }
+    /* line 19, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+    .course_links a:hover {
+      background: black; }
+    /* line 22, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+    .course_links a:after {
+      display: none; }
+  @media (max-width: 1500px) {
+    /* line 28, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+    .course_links a {
+      width: 200px; } }
+  @media (max-width: 1300px) {
+    /* line 34, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+    .course_links {
+      position: static;
+      margin: 20px 0;
+      width: auto; }
+      /* line 20, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+      .course_links ul:after {
+        content: '';
+        clear: both;
+        display: table; }
+      /* line 41, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+      .course_links li {
+        float: right;
+        width: 33%;
+        margin: 0; }
+        /* line 45, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+        .course_links li a {
+          width: auto;
+          margin-left: 20px; }
+        /* line 50, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+        .course_links li:first-child a {
+          margin-left: 0; } }
+  @media (max-width: 800px) {
+    /* line 60, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+    .course_links li {
+      float: none;
+      width: auto; }
+      /* line 63, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+      .course_links li a {
+        text-align: center;
+        margin: 20px 0 0 0; }
+      /* line 68, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_course_links.css.scss */
+      .course_links li:first-child a {
+        margin-top: 0; } }
+
+/* line 1, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_email_signup.css.scss */
+.email_signup {
+  background: #eee;
+  padding: 20px; }
+  /* line 4, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_email_signup.css.scss */
+  .email_signup h2 {
+    margin-top: 0; }
+  /* line 7, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_email_signup.css.scss */
+  .email_signup .email, .email_signup .name {
+    margin-bottom: 10px; }
+    /* line 9, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_email_signup.css.scss */
+    .email_signup .email label, .email_signup .name label {
+      width: 6em;
+      display: inline-block; }
+    /* line 13, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_email_signup.css.scss */
+    .email_signup .email input, .email_signup .name input {
+      width: auto;
+      display: inline-block;
+      width: 15em; }
+  /* line 20, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_email_signup.css.scss */
+  .email_signup .go button {
+    font-size: 26.56px;
+    padding: 10px 20px;
+    background: #222;
+    color: #fff;
+    border: none;
+    margin-left: 100px; }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_exercise.css.scss */
+section.exercise {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 20px; }
+  /* line 7, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_exercise.css.scss */
+  section.exercise > :first-child {
+    margin-top: 0; }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+footer {
+  clear: both;
+  margin: 40px 0 0 0;
+  padding: 0 0 20px 0;
+  background: #222; }
+  /* line 20, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+  footer:after {
+    content: '';
+    clear: both;
+    display: table; }
+  /* line 10, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+  footer, footer h2, footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300; }
+  /* line 15, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+  footer a:hover {
+    text-decoration: underline; }
+  /* line 18, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+  footer nav {
+    float: left;
+    width: 250px;
+    font-size: 14.4px;
+    padding: 0 20px; }
+    /* line 23, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+    footer nav > ul, footer nav > li {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    /* line 28, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+    footer nav > li {
+      margin: 1em 0; }
+  /* line 33, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+  footer nav.stack_overflow li:before {
+    content: ">"; }
+
+@media (max-width: 1040px) {
+  /* line 41, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+  footer nav {
+    width: 250px; } }
+@media (max-width: 840px) {
+  /* line 48, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+  footer {
+    padding-top: 20px;
+    width: auto; }
+    /* line 51, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_footer.css.scss */
+    footer nav {
+      width: auto;
+      float: none; } }
+/* line 5, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+header nav.main, header nav.technology {
+  margin: 0;
+  padding: 0 10px 0 130px; }
+  /* line 8, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+  header nav.main ul, header nav.main li, header nav.technology ul, header nav.technology li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  /* line 13, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+  header nav.main li, header nav.technology li {
+    display: inline-block; }
+  /* line 16, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+  header nav.main a, header nav.technology a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px; }
+/* line 20, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+header nav.main:after {
+  content: '';
+  clear: both;
+  display: table; }
+/* line 25, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+header nav.main li {
+  float: right; }
+/* line 28, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+header nav.main li:first-child {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0; }
+  /* line 33, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+  header nav.main li:first-child a {
+    padding: 0;
+    margin: 0;
+    display: block; }
+    /* line 37, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+    header nav.main li:first-child a:after {
+      display: none; }
+    /* line 40, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+    header nav.main li:first-child a img {
+      border: 5px solid #fff;
+      width: 105px;
+      border-radius: 100px;
+      display: block;
+      transition: all 1s; }
+    /* line 48, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+    header nav.main li:first-child a:hover img {
+      border: 5px solid #040404; }
+/* line 54, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+header nav.main a {
+  color: #040404; }
+/* line 59, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+header nav.technology {
+  background: #222; }
+  /* line 62, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+  header nav.technology a {
+    color: #fff; }
+@media (max-width: 800px) {
+  /* line 69, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+  header nav.main, header nav.technology {
+    text-align: center;
+    padding: 10px; }
+    /* line 73, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+    header nav.main li, header nav.technology li {
+      float: none;
+      display: inline-block; }
+    /* line 77, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+    header nav.main a, header nav.technology a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px; }
+  /* line 83, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+  header nav.main {
+    padding-top: 70px; }
+    /* line 85, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+    header nav.main li:first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center; }
+      /* line 91, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+      header nav.main li:first-child a {
+        display: inline-block;
+        margin-top: 15px; }
+      /* line 95, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_header.css.scss */
+      header nav.main li:first-child a img {
+        width: 50px;
+        border: none; } }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_intro.css.scss */
+section.intro {
+  font-size: 26.56px;
+  margin-bottom: 0;
+  width: auto; }
+
+/* line 1, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_questions_answered.css.scss */
+aside.questions_answered {
+  padding: 20px;
+  margin: 20px 0;
+  background: #eee;
+  border-top: 3px solid black;
+  font-style: italic; }
+  /* line 7, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_questions_answered.css.scss */
+  aside.questions_answered h2 {
+    font-size: 16px;
+    margin-top: 0; }
+  /* line 11, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_questions_answered.css.scss */
+  aside.questions_answered ul, aside.questions_answered li {
+    margin: 0;
+    padding: 0; }
+  /* line 14, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_questions_answered.css.scss */
+  aside.questions_answered ul {
+    margin-left: 20px; }
+
+/* line 2, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_section_logo.css.scss */
+img.sectionLogo {
+  display: block;
+  height: 100px;
+  width: auto;
+  margin: 0 auto; }
+
+/* line 1, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+nav.sharing {
+  position: fixed;
+  top: 200px;
+  left: 0;
+  width: 50px; }
+  /* line 6, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+  nav.sharing ul, nav.sharing li {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  /* line 11, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+  nav.sharing li {
+    margin-bottom: 20px; }
+  /* line 14, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+  nav.sharing a {
+    padding: 10px;
+    display: block;
+    background: #eee; }
+    /* line 18, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+    nav.sharing a:after {
+      transition: 0s; }
+  /* line 22, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+  nav.sharing a:hover {
+    background: #eee;
+    width: 60px;
+    padding-left: 20px; }
+    /* line 26, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+    nav.sharing a:hover:after {
+      transition: 0s; }
+  /* line 30, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+  nav.sharing img {
+    display: block;
+    width: 30px; }
+  @media (max-width: 1000px) {
+    /* line 36, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+    nav.sharing {
+      position: static;
+      width: auto;
+      display: block;
+      margin: 20px 0; }
+    /* line 42, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+    nav.sharing li, nav.sharing a, nav.sharing img {
+      display: inline-block; }
+    /* line 45, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+    nav.sharing a {
+      float: left;
+      width: 50px;
+      height: 50px; }
+      /* line 49, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_share_links.css.scss */
+      nav.sharing a:hover {
+        width: 50px;
+        padding: 10px; } }
+
+/* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_subtitle.css.scss */
+.subtitle {
+  font-size: 26.56px;
+  text-align: center; }
+
+/* line 2, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_testimonials.css.scss */
+.testimonials img {
+  width: 10%;
+  float: left;
+  margin: 8px 20px 20px 0; }
+/* line 7, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/components/_testimonials.css.scss */
+.testimonials h2 {
+  margin-top: 40px; }
+
+/* line 2, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_blog_index.css.scss */
+.blog_index h1.top {
+  text-align: center;
+  font-size: 73.18874px; }
+/* line 6, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_blog_index.css.scss */
+.blog_index .content {
+  width: 75%; }
+/* line 9, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_blog_index.css.scss */
+.blog_index article {
+  padding-bottom: 40px;
+  border-bottom: 1px solid grey; }
+/* line 16, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_blog_index.css.scss */
+.blog_index .date {
+  display: block;
+  margin: 0 0 20px 0; }
+@media (max-width: 1000px) {
+  /* line 21, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_blog_index.css.scss */
+  .blog_index .content {
+    width: auto; } }
+
+/* line 2, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_blog_page.css.scss */
+.blog_page article {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  width: 75%; }
+@media (max-width: 1000px) {
+  /* line 12, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_blog_page.css.scss */
+  .blog_page article {
+    margin: 20px 0;
+    padding: 0;
+    width: auto; } }
+
+/* line 4, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_course_page.css.scss */
+.course_page h1 {
+  text-align: center;
+  font-size: 73.18874px; }
+/* line 8, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_course_page.css.scss */
+.course_page img.sectionLogo {
+  display: block;
+  width: 30px;
+  margin: 0 auto; }
+/* line 13, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_course_page.css.scss */
+.course_page .subtitle {
+  font-size: 26.56px;
+  text-align: center; }
+
+/* line 4, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_exercise_page.css.scss */
+.exercise_page article {
+  max-width: 800px;
+  float: right;
+  width: 75%;
+  padding-left: 5%; }
+/* line 10, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_exercise_page.css.scss */
+.exercise_page nav.sidebar {
+  padding-top: 50px;
+  padding-right: 5%;
+  float: left;
+  width: 25%;
+  float: left; }
+  /* line 16, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_exercise_page.css.scss */
+  .exercise_page nav.sidebar ul, .exercise_page nav.sidebar li {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  /* line 21, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_exercise_page.css.scss */
+  .exercise_page nav.sidebar a, .exercise_page nav.sidebar span {
+    display: block;
+    padding: 10px;
+    color: black; }
+  /* line 26, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_exercise_page.css.scss */
+  .exercise_page nav.sidebar span {
+    font-weight: bold; }
+  /* line 30, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_exercise_page.css.scss */
+  .exercise_page nav.sidebar li.section a {
+    border: 1px dotted black;
+    border-bottom: none; }
+  /* line 36, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_exercise_page.css.scss */
+  .exercise_page nav.sidebar li.course a {
+    background: black;
+    color: white; }
+
+/* line 4, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_landing_page.css.scss */
+.landing_page h1 {
+  text-align: center;
+  font-size: 73.18874px; }
+
+/* line 4, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_section_index.css.scss */
+.section_index_page h1 {
+  text-align: center;
+  font-size: 73.18874px; }
+/* line 8, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_section_index.css.scss */
+.section_index_page .subtitle {
+  font-size: 26.56px;
+  text-align: center; }
+/* line 13, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/pages/_section_index.css.scss */
+.section_index_page nav.courses ul, .section_index_page nav.courses li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+
+/* line 38, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+[dropdown] ul {
+  display: none; }
+
+/* line 42, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+.pullout {
+  font-size: 26.56px;
+  font-weight: 800;
+  -webkit-transform: skew(-15deg); }
+
+/* line 48, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+.highlight {
+  font-weight: 800; }
+
+/* line 52, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+aside.pullquote {
+  position: absolute;
+  right: 20px;
+  padding: 20px;
+  width: 250px;
+  font-weight: 800;
+  border-radius: 3px;
+  border: 1px solid #222; }
+  /* line 59, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+  aside.pullquote:before {
+    content: '\201C'; }
+  /* line 61, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+  aside.pullquote:after {
+    content: '\201D'; }
+
+/* line 67, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+aside.sidenote {
+  position: absolute;
+  right: 20px;
+  padding: 20px;
+  width: 250px;
+  font-weight: 800;
+  border-radius: 3px;
+  border: 1px solid #222; }
+
+/* line 78, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+.blog_article_list section {
+  width: auto; }
+/* line 81, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+.blog_article_list a {
+  text-decoration: none;
+  color: #222;
+  display: block; }
+/* line 86, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+.blog_article_list a:hover {
+  background: #eee; }
+/* line 89, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+.blog_article_list .read_more {
+  font-weight: bold;
+  text-align: right; }
+
+/* line 95, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+.date {
+  font-style: italic; }
+
+/* line 99, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+iframe {
+  width: 100% !important; }
+
+/* line 104, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+.slideDown {
+  transition: all 1s; }
+
+@media (max-width: 1260px) {
+  /* line 109, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/style.css.scss */
+  aside.pullquote {
+    display: none; } }

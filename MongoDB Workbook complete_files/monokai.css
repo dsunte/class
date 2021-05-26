@@ -1,0 +1,251 @@
+/* line 1, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+code {
+  /* Comment */
+  /* Error */
+  /* Keyword */
+  /* Literal */
+  /* Name */
+  /* Operator */
+  /* Punctuation */
+  /* Comment.Multiline */
+  /* Comment.Preproc */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Generic.Emph */
+  /* Generic.Strong */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Namespace */
+  /* Keyword.Pseudo */
+  /* Keyword.Reserved */
+  /* Keyword.Type */
+  /* Literal.Date */
+  /* Literal.Number */
+  /* Literal.String */
+  /* Name.Attribute */
+  /* Name.Builtin */
+  /* Name.Class */
+  /* Name.Constant */
+  /* Name.Decorator */
+  /* Name.Entity */
+  /* Name.Exception */
+  /* Name.Function */
+  /* Name.Label */
+  /* Name.Namespace */
+  /* Name.Other */
+  /* Name.Property */
+  /* Name.Tag */
+  /* Name.Variable */
+  /* Operator.Word */
+  /* Text.Whitespace */
+  /* Literal.Number.Float */
+  /* Literal.Number.Hex */
+  /* Literal.Number.Integer */
+  /* Literal.Number.Oct */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+  /* Name.Builtin.Pseudo */
+  /* Name.Variable.Class */
+  /* Name.Variable.Global */
+  /* Name.Variable.Instance */
+  /* Literal.Number.Integer.Long */
+  /* Generic Heading & Diff Header */
+  /* Generic.Subheading & Diff Unified/Comment? */
+  /* Generic.Deleted & Diff Deleted */
+  /* Generic.Inserted & Diff Inserted */ }
+  /* line 2, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .hll {
+    background-color: #49483e; }
+  /* line 3, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .c {
+    color: #75715e; }
+  /* line 4, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .err {
+    color: #960050;
+    background-color: #1e0010; }
+  /* line 5, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .k {
+    color: #66d9ef; }
+  /* line 6, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .l {
+    color: #ae81ff; }
+  /* line 7, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .n {
+    color: #f8f8f2; }
+  /* line 8, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .o {
+    color: #f92672; }
+  /* line 9, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .p {
+    color: #f8f8f2; }
+  /* line 10, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .cm {
+    color: #75715e; }
+  /* line 11, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .cp {
+    color: #75715e; }
+  /* line 12, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .c1 {
+    color: #75715e; }
+  /* line 13, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .cs {
+    color: #75715e; }
+  /* line 14, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .ge {
+    font-style: italic; }
+  /* line 15, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .gs {
+    font-weight: bold; }
+  /* line 16, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .kc {
+    color: #66d9ef; }
+  /* line 17, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .kd {
+    color: #66d9ef; }
+  /* line 18, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .kn {
+    color: #f92672; }
+  /* line 19, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .kp {
+    color: #66d9ef; }
+  /* line 20, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .kr {
+    color: #66d9ef; }
+  /* line 21, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .kt {
+    color: #66d9ef; }
+  /* line 22, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .ld {
+    color: #e6db74; }
+  /* line 23, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .m {
+    color: #ae81ff; }
+  /* line 24, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .s {
+    color: #e6db74; }
+  /* line 25, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .na {
+    color: #a6e22e; }
+  /* line 26, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .nb {
+    color: #f8f8f2; }
+  /* line 27, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .nc {
+    color: #a6e22e; }
+  /* line 28, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .no {
+    color: #66d9ef; }
+  /* line 29, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .nd {
+    color: #a6e22e; }
+  /* line 30, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .ni {
+    color: #f8f8f2; }
+  /* line 31, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .ne {
+    color: #a6e22e; }
+  /* line 32, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .nf {
+    color: #a6e22e; }
+  /* line 33, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .nl {
+    color: #f8f8f2; }
+  /* line 34, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .nn {
+    color: #f8f8f2; }
+  /* line 35, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .nx {
+    color: #a6e22e; }
+  /* line 36, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .py {
+    color: #f8f8f2; }
+  /* line 37, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .nt {
+    color: #f92672; }
+  /* line 38, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .nv {
+    color: #f8f8f2; }
+  /* line 39, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .ow {
+    color: #f92672; }
+  /* line 40, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .w {
+    color: #f8f8f2; }
+  /* line 41, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .mf {
+    color: #ae81ff; }
+  /* line 42, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .mh {
+    color: #ae81ff; }
+  /* line 43, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .mi {
+    color: #ae81ff; }
+  /* line 44, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .mo {
+    color: #ae81ff; }
+  /* line 45, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .sb {
+    color: #e6db74; }
+  /* line 46, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .sc {
+    color: #e6db74; }
+  /* line 47, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .sd {
+    color: #e6db74; }
+  /* line 48, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .s2 {
+    color: #e6db74; }
+  /* line 49, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .se {
+    color: #ae81ff; }
+  /* line 50, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .sh {
+    color: #e6db74; }
+  /* line 51, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .si {
+    color: #e6db74; }
+  /* line 52, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .sx {
+    color: #e6db74; }
+  /* line 53, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .sr {
+    color: #e6db74; }
+  /* line 54, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .s1 {
+    color: #e6db74; }
+  /* line 55, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .ss {
+    color: #e6db74; }
+  /* line 56, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .bp {
+    color: #f8f8f2; }
+  /* line 57, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .vc {
+    color: #f8f8f2; }
+  /* line 58, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .vg {
+    color: #f8f8f2; }
+  /* line 59, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .vi {
+    color: #f8f8f2; }
+  /* line 60, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .il {
+    color: #ae81ff; }
+  /* line 63, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .gu {
+    color: #75715e; }
+  /* line 64, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .gd {
+    color: #f92672; }
+  /* line 65, /Users/nicholas/Dropbox/code/nicholasjohnson.com/source/stylesheets/monokai.css.scss */
+  code .gi {
+    color: #a6e22e; }
